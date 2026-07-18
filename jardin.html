@@ -41,15 +41,17 @@ padding:40px 20px;
 }
 
 
+
 h1 {
 
 font-size:42px;
 
 color:#d4af37;
 
-margin-top:30px;
+margin-top:20px;
 
 }
+
 
 
 .intro {
@@ -58,11 +60,12 @@ font-size:20px;
 
 line-height:1.6;
 
-max-width:400px;
+max-width:420px;
 
-margin:auto;
+margin:20px auto;
 
 }
+
 
 
 .chemin {
@@ -73,18 +76,19 @@ display:flex;
 
 flex-direction:column;
 
-gap:25px;
-
 align-items:center;
 
+gap:25px;
+
 }
+
 
 
 .fleur {
 
 width:120px;
 
-height:120px;
+min-height:120px;
 
 border-radius:50%;
 
@@ -94,15 +98,43 @@ border:3px solid #d4af37;
 
 display:flex;
 
+flex-direction:column;
+
 justify-content:center;
 
 align-items:center;
 
 font-size:45px;
 
-box-shadow:0 0 25px rgba(212,175,55,0.5);
+color:#333;
+
+box-shadow:
+0 0 25px rgba(212,175,55,0.5);
+
+transition:0.4s;
 
 }
+
+
+
+.fleur:hover {
+
+transform:scale(1.08);
+
+}
+
+
+
+.fleur small {
+
+font-size:15px;
+
+color:#555;
+
+margin-top:8px;
+
+}
+
 
 
 </style>
@@ -116,7 +148,9 @@ box-shadow:0 0 25px rgba(212,175,55,0.5);
 <div class="jardin">
 
 
-<h1>🌹Ton jardin🌹</h1>
+<h1>
+🌿 Ton jardin 🌿
+</h1>
 
 
 <p class="intro">
@@ -133,20 +167,35 @@ sur le chemin vers ton grand jour.
 </div>
 
 
+
 </div>
+
+
 
 <script>
 
-let chemin = document.getElementById("chemin");
+
+let chemin =
+document.getElementById("chemin");
 
 
-let debut = new Date("July 21, 2026");
-let fin = new Date("August 30, 2026");
+
+let debut =
+new Date("July 21, 2026");
+
+let fin =
+new Date("August 30, 2026");
 
 
-// Mode test pour vous
-// Changez la date ici pour tester
-let aujourdHui = new Date("July 21, 2026");
+
+// MODE TEST
+// Pour essayer l'application,
+// changez cette date.
+// Plus tard on remettra la vraie date.
+
+let aujourdHui =
+new Date("July 21, 2026");
+
 
 
 
@@ -156,7 +205,8 @@ return date.toLocaleDateString(
 "fr-FR",
 {
 day:"numeric",
-month:"long"
+month:"long",
+year:"numeric"
 }
 );
 
@@ -164,19 +214,26 @@ month:"long"
 
 
 
-let dateActuelle = new Date(debut);
+
+let dateActuelle =
+new Date(debut);
+
 
 
 
 while(dateActuelle <= fin){
 
 
-let fleur = document.createElement("div");
+
+let fleur =
+document.createElement("div");
 
 fleur.className="fleur";
 
 
+
 let symbole;
+
 
 
 if(dateActuelle < aujourdHui){
@@ -186,7 +243,9 @@ symbole="🪷";
 }
 
 else if(
-dateActuelle.getTime() === aujourdHui.getTime()
+dateActuelle.getTime()
+===
+aujourdHui.getTime()
 ){
 
 symbole="💎";
@@ -201,17 +260,19 @@ symbole="🌙";
 
 
 
-fleur.innerHTML = `
+
+fleur.innerHTML=
+
+`
 
 ${symbole}
-
-<br>
 
 <small>
 ${afficherDate(dateActuelle)}
 </small>
 
 `;
+
 
 
 
@@ -224,9 +285,14 @@ dateActuelle.getDate()+1
 );
 
 
+
 }
 
 
+
 </script>
+
+
 </body>
+
 </html>
