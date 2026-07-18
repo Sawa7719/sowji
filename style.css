@@ -837,3 +837,121 @@ box-shadow:0 0 20px gold;
 
 
 }
+/* ==========================
+   PETALES MAGIQUES
+========================== */
+
+.petale{
+
+position:fixed;
+
+top:-50px;
+
+font-size:25px;
+
+z-index:10;
+
+pointer-events:none;
+
+animation:tomber 8s linear infinite;
+
+}
+
+
+@keyframes tomber{
+
+0%{
+
+transform:translateY(-50px) rotate(0deg);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:translateY(110vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+}/* ==========================
+   ENTREE ROYALE
+========================== */
+
+
+.coffre{
+
+margin:80px auto;
+
+max-width:500px;
+
+padding:50px 30px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#8b1538,
+
+#300015
+
+);
+
+border:
+
+5px solid #d4af37;
+
+border-radius:30px;
+
+box-shadow:
+
+0 0 60px gold;
+
+animation:apparition 2s;
+
+}
+
+
+
+.couvercle{
+
+font-size:80px;
+
+transition:1.5s;
+
+}
+
+
+
+.coffre.ouvert .couvercle{
+
+transform:
+
+rotateX(80deg)
+
+translateY(-40px);
+
+}
+
+
+
+.coffre h1{
+
+color:#ffd966;
+
+}
+
+
+
+.coffre p{
+
+font-size:20px;
+
+color:#fff0c4;
+
+}
