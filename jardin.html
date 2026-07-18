@@ -134,7 +134,7 @@ document.createElement("div");
 
 fleur.className =
 
-"fleur-jardin";
+"fleur-jardin fleur-" + compteur;
 
 
 
@@ -259,7 +259,10 @@ alert(
 
 
 
-chemin.appendChild(fleur);
+fleur.style.setProperty(
+"--position",
+compteur
+);
 
 
 
