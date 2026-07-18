@@ -3,7 +3,7 @@ const lettres = {
 
 "2026-07-21": {
 
-titre: "J-41 : Le début du voyage",
+titre: "J-31 : Le début du voyage",
 
 texte: `
 
@@ -29,7 +29,7 @@ Profite de chaque étape, car les plus beaux moments sont souvent ceux qu’on p
 
 "2026-07-22": {
 
-titre: "J-40 : Une histoire qui commence",
+titre: "J-30 : Une histoire qui commence",
 
 texte: `
 
@@ -41,7 +41,7 @@ Petite pause souvenir…
 
 <br><br>
 
-Il y a quelques années, une simple rencontre en sixième allait devenir une belle histoire.
+Il y a quelques années, une simple rencontre allait devenir une belle histoire.
 
 <br><br>
 
@@ -59,7 +59,7 @@ Certains hasards deviennent de vrais cadeaux. 🤍
 
 "2026-07-23": {
 
-titre: "J-39 : L’amour se construit",
+titre: "J-29 : L’amour se construit",
 
 texte: `
 
@@ -85,7 +85,7 @@ Les grandes histoires naissent souvent des petites attentions.
 
 "2026-07-24": {
 
-titre: "J-38 : Choisir son partenaire",
+titre: "J-28 : Choisir son partenaire",
 
 texte: `
 
@@ -103,6 +103,7 @@ Dans les moments heureux comme dans les moments plus difficiles.
 
 Aimer, c’est avancer ensemble, pas chercher la perfection.
 
+
 `
 
 },
@@ -111,7 +112,7 @@ Aimer, c’est avancer ensemble, pas chercher la perfection.
 
 "2026-07-25": {
 
-titre: "J-37 : La confiance",
+titre: "J-27 : La confiance",
 
 texte: `
 
@@ -137,7 +138,7 @@ Que toi et Bava gardiez toujours cette confiance.
 
 "2026-07-26": {
 
-titre: "J-36 : Une équipe",
+titre: "J-26: Une équipe",
 
 texte: `
 
@@ -154,7 +155,15 @@ Deux personnes différentes qui apprennent à avancer dans la même direction.
 <br><br>
 
 Que votre équipe soit toujours remplie de respect et de complicité.
+🎵 Petit moment à écouter :
 
+<br><br>
+
+<a href="https://youtu.be/kjT-YBzqMCE?is=LnImhFc-D3vKb3Y3" target="_blank">
+
+Écouter cette chanson ❤️
+
+</a>
 `
 
 },
@@ -163,7 +172,7 @@ Que votre équipe soit toujours remplie de respect et de complicité.
 
 "2026-07-27": {
 
-titre: "J-35 : La patience",
+titre: "J-25: La patience",
 
 texte: `
 
@@ -189,7 +198,7 @@ Les plus beaux foyers se construisent avec de la douceur.
 
 "2026-07-28": {
 
-titre: "J-34 : Les petits bonheurs",
+titre: "J-24 : Les petits bonheurs",
 
 texte: `
 
@@ -207,6 +216,15 @@ Un repas ensemble, un rire, une discussion après une longue journée…
 
 Ce sont souvent ces petits instants qui deviennent les plus grands souvenirs.
 
+🎵 Petit moment à écouter :
+
+<br><br>
+
+<a href="https://youtu.be/NaZznqme2hg?is=UrzZxGXTJPLUghCy" target="_blank">
+
+Écouter cette chanson ❤️
+
+</a>
 `
 
 },
@@ -215,7 +233,7 @@ Ce sont souvent ces petits instants qui deviennent les plus grands souvenirs.
 
 "2026-07-29": {
 
-titre: "J-33 : Le respect",
+titre: "J-23: Le respect",
 
 texte: `
 
@@ -231,7 +249,7 @@ Le respect permet de tenir cette construction dans le temps.
 
 <br><br>
 
-Écouter, comprendre et prendre soin de l’autre sont des preuves d’amour chaque jour.
+Écouter, comprendre et prendre soin de l’autre sont des preuves d’amour chaque jour❤️.
 
 `
 
@@ -241,7 +259,7 @@ Le respect permet de tenir cette construction dans le temps.
 
 "2026-07-30": {
 
-titre: "J-32 : La communication",
+titre: "J-22 : La communication",
 
 texte: `
 
@@ -267,7 +285,7 @@ Une bonne communication protège l’amour.
 
 "2026-07-31": {
 
-titre: "J-31 : La première étape",
+titre: "J-21 : La première étape",
 
 texte: `
 
@@ -294,7 +312,7 @@ Le compte à rebours continue… 💍
 },
 "2026-08-01": {
 
-titre: "J-30 : Le début d’un nouveau chapitre",
+titre: "J-20 : Le début d’un nouveau chapitre",
 
 texte: `
 
@@ -320,7 +338,7 @@ Garde toujours tes rêves, tes valeurs et cette belle personne que tu es.
 
 "2026-08-02": {
 
-titre: "J-29 : Le secret d’un couple heureux",
+titre: "J-19 : Le secret d’un couple heureux",
 
 texte: `
 
@@ -337,7 +355,15 @@ C’est un couple qui apprend à traverser les difficultés ensemble.
 <br><br>
 
 Soyez toujours du même côté, même quand la vie vous met à l’épreuve.
+🎵 Petit moment à écouter :
 
+<br><br>
+
+<a href="https://youtu.be/r0c9Q21AfLA?is=y0KXu8A2j9V7hVDW" target="_blank">
+
+Écouter cette chanson ❤️
+
+</a>
 `
 
 },
@@ -346,7 +372,7 @@ Soyez toujours du même côté, même quand la vie vous met à l’épreuve.
 
 "2026-08-03": {
 
-titre: "J-28 : La douceur",
+titre: "J-18 : La douceur",
 
 texte: `
 
@@ -372,7 +398,7 @@ Gardez toujours cette tendresse entre vous.
 
 "2026-08-04": {
 
-titre: "J-27 : Une petite pause souvenir",
+titre: "J-17 : Une petite pause souvenir",
 
 texte: `
 
@@ -400,7 +426,7 @@ Tous ces souvenirs font partie du chemin qui nous a amenées jusqu’ici.
 
 <br><br>
 
-<a href="https://youtu.be/p8GPueXO3L4" target="_blank">
+<a href="https://youtu.be/r60Ni7by09w?is=qdlpDjDag0rEST2v" target="_blank">
 
 Écouter cette chanson ❤️
 
@@ -414,7 +440,7 @@ Tous ces souvenirs font partie du chemin qui nous a amenées jusqu’ici.
 
 "2026-08-05": {
 
-titre: "J-26 : Se soutenir",
+titre: "J-16 : Se soutenir",
 
 texte: `
 
@@ -440,7 +466,7 @@ Soyez toujours le refuge de l’autre.
 
 "2026-08-06": {
 
-titre: "J-25 : Garder la complicité",
+titre: "J-15 : Garder la complicité",
 
 texte: `
 
@@ -466,7 +492,7 @@ Continuez à créer des souvenirs, même dans les moments ordinaires.
 
 "2026-08-07": {
 
-titre: "J-24 : Les traditions",
+titre: "J-14 : Les traditions",
 
 texte: `
 
@@ -492,7 +518,7 @@ C’est cela qui rend chaque histoire unique.
 
 "2026-08-08": {
 
-titre: "J-23 : La gratitude",
+titre: "J-13 : La gratitude",
 
 texte: `
 
@@ -518,7 +544,7 @@ La gratitude garde l’amour vivant.
 
 "2026-08-09": {
 
-titre: "J-22 : Une chanson pour avancer",
+titre: "J-12 : Une chanson pour avancer",
 
 texte: `
 
@@ -526,7 +552,7 @@ Bebbou,
 
 <br><br>
 
-Certaines chansons accompagnent les moments importants de nos vies.
+Certaines chansons accompagnent certains moments de nos vies.
 
 <br><br>
 
@@ -538,9 +564,9 @@ Elles deviennent comme des souvenirs que l’on peut retrouver à tout moment.
 
 <br><br>
 
-<a href="https://youtu.be/QcQpqWhTBCE" target="_blank">
+<a href="https://youtu.be/d2tnwgcBfoA?is=l3z4YhDSFCELJXmr" target="_blank">
 
-Écouter cette chanson ❤️
+Dit moi ce que ça te rappel😂
 
 </a>
 
@@ -552,7 +578,7 @@ Elles deviennent comme des souvenirs que l’on peut retrouver à tout moment.
 
 "2026-08-10": {
 
-titre: "J-21 : Le plus beau choix",
+titre: "J-11 : Le plus beau choix",
 
 texte: `
 
@@ -576,7 +602,7 @@ Que toi et Bava gardiez toujours cette envie de vous choisir.
   
 "2026-08-11": {
 
-titre: "J-20 : L’importance du dialogue",
+titre: "J-10 : L’importance du dialogue",
 
 texte: `
 
@@ -606,7 +632,7 @@ Continuez toujours à vous écouter.
 
 "2026-08-12": {
 
-titre: "J-19 : Les souvenirs qui restent",
+titre: "J-9 : Les souvenirs qui restent",
 
 texte: `
 
@@ -630,7 +656,7 @@ Je suis heureuse d’avoir partagé une partie de ton chemin.
 
 <br><br>
 
-<a href="https://youtu.be/vK5E_aeBGYA" target="_blank">
+<a href="https://youtu.be/QYh6mYIJG2Y?is=EGAFrCSUf6BjnxUb" target="_blank">
 
 Écouter cette chanson ❤️
 
@@ -644,7 +670,7 @@ Je suis heureuse d’avoir partagé une partie de ton chemin.
 
 "2026-08-13": {
 
-titre: "J-18 : Apprendre à deux",
+titre: "J-8 : Apprendre à deux",
 
 texte: `
 
@@ -670,7 +696,7 @@ Chaque jour est une nouvelle occasion de mieux aimer.
 
 "2026-08-14": {
 
-titre: "J-17 : Le pardon",
+titre: "J-7 : Le pardon",
 
 texte: `
 
@@ -696,7 +722,7 @@ L’amour grandit quand deux personnes choisissent de se comprendre.
 
 "2026-08-15": {
 
-titre: "J-16 : Garder la magie",
+titre: "J-6 : Garder la magie",
 
 texte: `
 
@@ -734,7 +760,7 @@ La magie se cache souvent dans les petites choses.
 
 "2026-08-16": {
 
-titre: "J-15 : Être le refuge de l’autre",
+titre: "J-5 : Être le refuge de l’autre",
 
 texte: `
 
@@ -760,7 +786,7 @@ Un foyer commence par deux cœurs qui se soutiennent.
 
 "2026-08-17": {
 
-titre: "J-14 : Les petits gestes",
+titre: "J-4 : Les petits gestes",
 
 texte: `
 
@@ -790,7 +816,7 @@ Tout cela construit une belle histoire.
 
 "2026-08-18": {
 
-titre: "J-13 : Votre histoire",
+titre: "J-3: Votre histoire",
 
 texte: `
 
@@ -820,7 +846,7 @@ Gardez votre authenticité.
 
 "2026-08-19": {
 
-titre: "J-12 : Bientôt le grand jour",
+titre: "J-2 : Bientôt le grand jour",
 
 texte: `
 
@@ -844,7 +870,7 @@ Ces souvenirs resteront avec toi toute ta vie.
 
 <br><br>
 
-<a href="https://youtu.be/7UqBO1cBgDc" target="_blank">
+<a href="https://youtu.be/hEHNef66HT0?is=iXNj7BDpm0adANOB" target="_blank">
 
 Écouter cette chanson ❤️
 
@@ -890,7 +916,7 @@ Que ton mariage avec Bava soit rempli d’amour, de respect et de bonheur.
 
 <br><br>
 
-<a href="https://youtu.be/0WtRNGubWGA" target="_blank">
+<a href="https://youtu.be/p8GPueXO3L4?is=oQFHlT6wYpEt2l10" target="_blank">
 
 Écouter cette chanson ❤️
 
@@ -940,7 +966,7 @@ Félicitations à vous deux. 🤍
 
 "2026-08-22": {
 
-titre: "Le lendemain d’un rêve",
+titre: "Le rêve continue",
 
 texte: `
 
@@ -948,7 +974,7 @@ Sow,
 
 <br><br>
 
-Après la magie du mariage commence la plus belle partie : la vie à deux.
+Après la magie commence a peine la plus belle partie arrive.
 
 <br><br>
 
@@ -1026,27 +1052,27 @@ Que chaque coin garde une petite histoire de votre amour.
 
 "2026-08-25": {
 
-titre: "Pour Bava",
+titre: "Demain tu finis jaune 💛",
 
 texte: `
 
-Sow,
+Prepare toi bien ma cherie
 
 <br><br>
 
-Un petit mot pour Bava :
+À la veille de ton Haldi, 
 
 <br><br>
-
-Prends soin de son cœur comme elle prendra soin du tien.
-
-<br><br>
-
-Continuez à vous choisir, à vous respecter et à vous faire grandir.
+je te souhaite une journée remplie de joie, d’amour et de beaux souvenirs. 
 
 <br><br>
+Que cette nouvelle étape t’apporte tout le bonheur que tu mérites
+<br><br>
+que ton mariage soit rempli de rires, de complicité et de merveilleux moments.
+<br><br>
+Profite pleinement de chaque instant 💛
+<br><br>
 
-Le plus beau cadeau dans un mariage est d’avoir un partenaire mais aussi un meilleur ami.
 
 `
 
@@ -1056,7 +1082,7 @@ Le plus beau cadeau dans un mariage est d’avoir un partenaire mais aussi un me
 
 "2026-08-26": {
 
-titre: "Une chanson pour un nouveau chapitre",
+titre: "Une chanson pour ton haldi",
 
 texte: `
 
@@ -1076,7 +1102,7 @@ J’espère que cette nouvelle étape sera remplie de souvenirs aussi beaux que 
 
 <br><br>
 
-<a href="https://youtu.be/P1fIdFRnfqw" target="_blank">
+<a href="https://youtu.be/ta-W16uw7zg?is=CSNxU2WO5qZDyncy" target="_blank">
 
 Écouter cette chanson ❤️
 
@@ -1090,23 +1116,31 @@ J’espère que cette nouvelle étape sera remplie de souvenirs aussi beaux que 
 
 "2026-08-27": {
 
-titre: "Toujours garder le rire",
+titre: "Que ton mehendi s",
 
 texte: `
 
-Sow,
+Ma chere Sowji,
 
 <br><br>
 
-Un couple qui rit ensemble garde une belle complicité.
+Que ton Mehendi soit aussi beau et profond que ton amour
+<br><br>
+qu’il devienne bien noir en signe de bonheur et de belles bénédictions. 
+<br><br>
+Que tu brilles de mille feux en ce jour si précieux, entourée d’amour, de joie et de belles énergies.
+<br><br>
+Que cette nouvelle vie soit remplie de bonheur, de complicité et de prospérité ❤️
+
+🎵 Petit moment à écouter :
 
 <br><br>
 
-Même après les années, gardez vos petites blagues, vos moments de folie et vos sourires.
+<a href="https://youtu.be/Fn0gvE6T9ro?is=79xnpQLyS5NYMXLK" target="_blank">
 
-<br><br>
+Écouter cette chanson ❤️
 
-Le bonheur aime les maisons où il y a des rires.
+</a>
 
 `
 
@@ -1136,8 +1170,17 @@ Elles deviennent une partie de ce que nous sommes.
 
 <br><br>
 
-Merci pour tous les souvenirs et bienvenue dans ce nouveau chapitre. 🤍
+Bienvenue dans ce nouveau chapitre de ta vie Madame Kanchumarthy. 🤍
 
+🎵 Petit moment à écouter :
+
+<br><br>
+
+<a href="https://youtu.be/3qpxJEp4Ec4?is=nDzcszer49gIOBbS" target="_blank">
+
+Écouter cette chanson ❤️
+
+</a>
 `
 
 },
@@ -1174,7 +1217,7 @@ Continue d’aimer avec ton grand cœur et de construire cette belle histoire av
 
 <br><br>
 
-<a href="https://youtu.be/QYh6mYIJG2Y" target="_blank">
+<a href="https://youtu.be/AgPBXfQpbKM?is=v9Lftt19pmhwtRaV" target="_blank">
 
 Écouter cette chanson ❤️
 
@@ -1204,7 +1247,7 @@ Voici la dernière fleur du jardin.
 
 <br><br>
 
-Depuis notre rencontre en sixième jusqu’à aujourd’hui, le chemin parcouru est rempli de souvenirs.
+Depuis notre rencontre jusqu’à aujourd’hui, le chemin parcouru est rempli de souvenirs.
 
 <br><br>
 
