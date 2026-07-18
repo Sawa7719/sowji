@@ -19,30 +19,52 @@
 <div class="parchemin">
 
 
+<div class="haut-parchemin"></div>
+
+
+
 <h1>
-📜 Une lettre pour toi
+Une lettre pour toi
 </h1>
 
 
-<div id="contenu">
+
+<div class="contenu-lettre">
 
 
-<p>
-Cette lettre voyage depuis le cœur...
-</p>
+<p id="dateLettre"></p>
 
 
 <p id="texteLettre">
 
+Cette lettre attend encore son histoire...
+
 </p>
 
 
-<div id="media">
+
+<div class="media">
+
+<!-- Photo -->
+<img id="photo" src="" alt="">
+
+
+<!-- Vidéo -->
+<video id="video" controls></video>
+
+
+<!-- Musique -->
+<audio id="musique" controls></audio>
+
 
 </div>
 
 
 </div>
+
+
+
+<div class="bas-parchemin"></div>
 
 
 
@@ -57,23 +79,14 @@ Retour au jardin
 
 
 
+
 <script>
-
-
-const texteLettre =
-document.getElementById("texteLettre");
-
-
-const media =
-document.getElementById("media");
-
 
 
 const param =
 new URLSearchParams(
 window.location.search
 );
-
 
 
 const date =
@@ -83,7 +96,8 @@ param.get("date")
 
 
 
-const jour =
+document.getElementById("dateLettre").innerHTML =
+
 date.toLocaleDateString(
 "fr-FR",
 {
@@ -95,26 +109,22 @@ year:"numeric"
 
 
 
-
-
-texteLettre.innerHTML =
+document.getElementById("texteLettre").innerHTML =
 
 `
-
 Ma chère Sowji,
 
 <br><br>
 
-Nous sommes le ${jour}.
+Aujourd’hui une nouvelle lettre arrive jusqu’à toi.
 
 <br><br>
 
-Cette lettre attend encore son histoire...
+Ici viendra le message écrit avec le cœur.
 
 <br><br>
 
-Avec toute mon affection 💛
-
+Avec toute mon affection.
 `;
 
 
