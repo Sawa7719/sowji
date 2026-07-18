@@ -3,7 +3,7 @@
 SOWJI
 Le coffre des lettres
 =================================
-*/
+*
 
 
 const lettres = {
