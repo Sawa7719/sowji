@@ -910,3 +910,41 @@ transform:translateY(0);
 
 
 }
+/* =================================
+   SCEAU DE DATE DU PARCHEMIN
+================================= */
+
+
+.sceau-date {
+
+
+display:inline-block;
+
+
+margin:20px;
+
+
+padding:10px 25px;
+
+
+border:2px solid #d4af37;
+
+
+border-radius:50px;
+
+
+color:#8b5a24;
+
+
+font-style:italic;
+
+
+background:rgba(255,255,255,.3);
+
+
+box-shadow:
+
+0 0 20px rgba(212,175,55,.4);
+
+
+}
