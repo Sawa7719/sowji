@@ -1023,3 +1023,70 @@ transform:translateY(0);
 
 
 }
+/* ==========================
+   COFFRE CINÉMATIQUE
+========================== */
+
+.coffre{
+
+animation:arrivee 1.5s ease;
+
+}
+
+.coffre.ouvert{
+
+animation:brille 1.8s ease;
+
+}
+
+.coffre.ouvert .couvercle{
+
+transform:rotateX(80deg) translateY(-35px);
+
+transition:1.5s;
+
+}
+
+@keyframes arrivee{
+
+from{
+
+opacity:0;
+
+transform:scale(.85);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+@keyframes brille{
+
+0%{
+
+box-shadow:0 0 20px gold;
+
+}
+
+50%{
+
+box-shadow:0 0 90px gold;
+
+transform:scale(1.03);
+
+}
+
+100%{
+
+box-shadow:0 0 20px gold;
+
+}
+
+}
