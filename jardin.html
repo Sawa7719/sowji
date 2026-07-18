@@ -8,165 +8,9 @@
 
 <title>Ton jardin</title>
 
-
-<style>
-
-body {
-
-margin:0;
-min-height:100vh;
-
-background:
-radial-gradient(circle at top, #183b2a, #050907);
-
-font-family:Georgia, serif;
-
-color:#f5e6b8;
-
-text-align:center;
-
-overflow-x:hidden;
-
-}
-
-
-.jardin {
-
-padding:40px 20px;
-
-}
-
-
-
-h1 {
-
-font-size:42px;
-
-color:#d4af37;
-
-text-shadow:0 0 15px rgba(212,175,55,0.5);
-
-}
-
-
-
-.intro {
-
-font-size:20px;
-
-line-height:1.6;
-
-max-width:420px;
-
-margin:20px auto 50px;
-
-}
-
-
-
-.chemin {
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:35px;
-
-max-width:600px;
-
-margin:auto;
-
-}
-
-
-
-.fleur {
-
-width:110px;
-
-height:110px;
-
-border-radius:50%;
-
-background:#f4ead3;
-
-border:3px solid #d4af37;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:38px;
-
-color:#333;
-
-box-shadow:
-
-0 0 20px rgba(212,175,55,0.4);
-
-transition:0.5s;
-
-animation:pousser 1s ease;
-
-}
-
-
-
-.fleur:hover {
-
-transform:translateY(-8px) scale(1.05);
-
-box-shadow:
-
-0 0 35px rgba(212,175,55,0.8);
-
-}
-
-
-
-.fleur small {
-
-font-size:13px;
-
-margin-top:5px;
-
-color:#555;
-
-}
-
-
-
-@keyframes pousser {
-
-from {
-
-opacity:0;
-
-transform:scale(0);
-
-}
-
-to {
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
-}
-
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
-
 
 
 <body>
@@ -180,76 +24,58 @@ transform:scale(1);
 </h1>
 
 
-<p class="intro">
+<p class="phrase">
 
-Un chemin de lettres t’attend.
-
-Certaines fleurs dorment encore,
-certaines ont déjà livré leur secret.
-
-</p>
-
-Chaque jour, une nouvelle fleur s’ouvre
-sur le chemin vers ton grand jour.
+Un voyage écrit avec le cœur,<br>
+jusqu'au plus beau des jours.
 
 </p>
 
 
-
-<div class="chemin" id="chemin">
-
-</div>
-
-
+<div id="chemin" class="chemin">
 
 </div>
 
+
+</div>
 
 
 
 <script>
 
 
-let chemin =
+const chemin =
 document.getElementById("chemin");
 
 
 
-let debut =
-new Date("July 21, 2026");
-
-let fin =
-new Date("August 30, 2026");
+const debut =
+new Date("2026-07-21");
 
 
-
-// DATE DE TEST
-// On changera ça plus tard
-// pour la vraie date automatique
-
-let aujourdHui =
-new Date("July 21, 2026");
+const fin =
+new Date("2026-08-30");
 
 
 
+// Date de test pour vérifier le fonctionnement
+// Plus tard elle sera automatique
+
+const aujourdHui =
+new Date("2026-07-21");
 
 
-function afficherDate(date){
+
+
+
+function formatDate(date){
 
 return date.toLocaleDateString(
-
 "fr-FR",
-
 {
-
 day:"numeric",
-
-month:"long",
-
-year:"numeric"
-
+month:"long"
 }
-
 );
 
 }
@@ -258,14 +84,14 @@ year:"numeric"
 
 
 
-let dateActuelle =
+let date =
 new Date(debut);
 
 
 
 
 
-while(dateActuelle <= fin){
+while(date <= fin){
 
 
 
@@ -277,53 +103,85 @@ fleur.className="fleur";
 
 
 
-let symbole;
+let etat;
 
 
 
-if(dateActuelle < aujourdHui){
+if(date < aujourdHui){
 
-symbole="🪷";
+etat="lotus";
 
 }
 
 else if(
-
-dateActuelle.getTime()
-
-===
-
-aujourdHui.getTime()
-
+date.getTime() === aujourdHui.getTime()
 ){
 
-symbole="💎";
+etat="bijou";
 
 }
 
 else{
 
-symbole="🌙";
+etat="lune";
 
 }
 
 
 
 
-fleur.innerHTML =
 
-`
+let symbole;
+
+
+
+if(etat==="lune"){
+
+symbole="☾";
+
+}
+
+if(etat==="bijou"){
+
+symbole="◇";
+
+}
+
+if(etat==="lotus"){
+
+symbole="✿";
+
+}
+
+
+
+
+
+fleur.innerHTML = `
+
+<div class="symbole">
 
 ${symbole}
 
-<small>
+</div>
 
-${afficherDate(dateActuelle)}
+<div class="date">
 
-</small>
+${formatDate(date)}
+
+</div>
 
 `;
 
+
+
+
+
+fleur.onclick=function(){
+
+ouvrirLettre(date, etat);
+
+};
 
 
 
@@ -332,18 +190,278 @@ chemin.appendChild(fleur);
 
 
 
-
-
-dateActuelle.setDate(
-
-dateActuelle.getDate()+1
-
+date.setDate(
+date.getDate()+1
 );
+
+
+}
+
+
+
+
+
+function ouvrirLettre(date, etat){
+
+
+if(etat==="lune"){
+
+alert(
+"Cette lettre poursuit encore son voyage..."
+);
+
+}
+
+
+else{
+
+
+window.location.href =
+"lettre.html?date="
++ date.toISOString();
+
+
+}
 
 
 
 }
 
+
+
+</script>
+
+
+</body>
+
+</html><!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ton jardin</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="jardin">
+
+
+<h1>
+🌿 Ton jardin 🌿
+</h1>
+
+
+<p class="phrase">
+
+Un voyage écrit avec le cœur,<br>
+jusqu'au plus beau des jours.
+
+</p>
+
+
+<div id="chemin" class="chemin">
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+const chemin =
+document.getElementById("chemin");
+
+
+
+const debut =
+new Date("2026-07-21");
+
+
+const fin =
+new Date("2026-08-30");
+
+
+
+// Date de test pour vérifier le fonctionnement
+// Plus tard elle sera automatique
+
+const aujourdHui =
+new Date("2026-07-21");
+
+
+
+
+
+function formatDate(date){
+
+return date.toLocaleDateString(
+"fr-FR",
+{
+day:"numeric",
+month:"long"
+}
+);
+
+}
+
+
+
+
+
+let date =
+new Date(debut);
+
+
+
+
+
+while(date <= fin){
+
+
+
+let fleur =
+document.createElement("div");
+
+
+fleur.className="fleur";
+
+
+
+let etat;
+
+
+
+if(date < aujourdHui){
+
+etat="lotus";
+
+}
+
+else if(
+date.getTime() === aujourdHui.getTime()
+){
+
+etat="bijou";
+
+}
+
+else{
+
+etat="lune";
+
+}
+
+
+
+
+
+let symbole;
+
+
+
+if(etat==="lune"){
+
+symbole="☾";
+
+}
+
+if(etat==="bijou"){
+
+symbole="◇";
+
+}
+
+if(etat==="lotus"){
+
+symbole="✿";
+
+}
+
+
+
+
+
+fleur.innerHTML = `
+
+<div class="symbole">
+
+${symbole}
+
+</div>
+
+<div class="date">
+
+${formatDate(date)}
+
+</div>
+
+`;
+
+
+
+
+
+fleur.onclick=function(){
+
+ouvrirLettre(date, etat);
+
+};
+
+
+
+
+chemin.appendChild(fleur);
+
+
+
+date.setDate(
+date.getDate()+1
+);
+
+
+}
+
+
+
+
+
+function ouvrirLettre(date, etat){
+
+
+if(etat==="lune"){
+
+alert(
+"Cette lettre poursuit encore son voyage..."
+);
+
+}
+
+
+else{
+
+
+window.location.href =
+"lettre.html?date="
++ date.toISOString();
+
+
+}
+
+
+
+}
 
 
 
