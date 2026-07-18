@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Une lettre pour toi</title>
+<title>Le parchemin</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -25,7 +25,11 @@
 
 
 
-<p id="dateLettre"></p>
+<div class="sceau-date">
+
+<span id="dateLettre"></span>
+
+</div>
 
 
 
@@ -71,13 +75,14 @@ Retour au jardin
 
 
 
-<!-- Coffre des lettres préparées -->
 
 <script src="lettres.js"></script>
 
 
 
+
 <script>
+
 
 
 const parametres =
@@ -106,7 +111,10 @@ date.toISOString().split("T")[0];
 
 
 
+
+
 document.getElementById("dateLettre").innerHTML =
+
 
 date.toLocaleDateString(
 
@@ -123,6 +131,8 @@ year:"numeric"
 }
 
 );
+
+
 
 
 
@@ -152,19 +162,13 @@ document.getElementById("musique");
 
 
 
-/*
-Recherche d'abord une lettre
-écrite depuis l'atelier,
-sinon utilise lettres.js
-*/
-
-
-
 let lettre = null;
 
 
 
-let lettreSauvegardee =
+
+
+let sauvegarde =
 
 localStorage.getItem(
 
@@ -176,38 +180,26 @@ localStorage.getItem(
 
 
 
-if(lettreSauvegardee){
+if(sauvegarde){
 
 
-let sauvegarde =
-
-JSON.parse(
-
-lettreSauvegardee
-
-);
+let contenu = JSON.parse(sauvegarde);
 
 
 
 lettre = {
 
 
-texte:
-
-sauvegarde.message,
+texte: contenu.message,
 
 
-photo:
-
-sauvegarde.photo,
+photo: contenu.photo,
 
 
 video:"",
 
 
-musique:
-
-sauvegarde.musique
+musique: contenu.musique
 
 
 };
@@ -216,13 +208,12 @@ sauvegarde.musique
 
 }
 
+
+
 else if(typeof lettres !== "undefined"){
 
 
-
-lettre =
-
-lettres[cleDate];
+lettre = lettres[cleDate];
 
 
 }
@@ -262,7 +253,6 @@ photo.style.display="none";
 
 
 
-
 if(lettre.video){
 
 
@@ -278,7 +268,6 @@ video.style.display="none";
 
 
 }
-
 
 
 
@@ -303,8 +292,9 @@ musique.style.display="none";
 
 }
 
-else{
 
+
+else{
 
 
 texteLettre.innerHTML =
@@ -315,7 +305,7 @@ Cette lettre n'est pas encore arrivée...
 
 <br><br>
 
-Elle poursuit encore son voyage jusqu'à toi.
+Elle voyage encore jusqu'au plus beau des jours.
 
 `;
 
@@ -330,9 +320,7 @@ Elle poursuit encore son voyage jusqu'à toi.
 function retourJardin(){
 
 
-window.location.href =
-
-"jardin.html";
+window.location.href="jardin.html";
 
 
 }
@@ -340,7 +328,6 @@ window.location.href =
 
 
 </script>
-
 
 
 </body>
