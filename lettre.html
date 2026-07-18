@@ -19,25 +19,22 @@
 <div class="parchemin">
 
 
-<div class="haut-parchemin"></div>
-
-
-
 <h1>
-Une lettre pour toi
+📜 Une lettre pour toi
 </h1>
+
+
+
+<p id="dateLettre"></p>
 
 
 
 <div class="contenu-lettre">
 
 
-<p id="dateLettre"></p>
-
-
 <p id="texteLettre">
 
-Cette lettre attend encore son histoire...
+Cette lettre voyage encore...
 
 </p>
 
@@ -45,26 +42,21 @@ Cette lettre attend encore son histoire...
 
 <div class="media">
 
-<!-- Photo -->
+
 <img id="photo" src="" alt="">
 
 
-<!-- Vidéo -->
 <video id="video" controls></video>
 
 
-<!-- Musique -->
 <audio id="musique" controls></audio>
 
 
 </div>
 
 
+
 </div>
-
-
-
-<div class="bas-parchemin"></div>
 
 
 
@@ -79,73 +71,190 @@ Retour au jardin
 
 
 
+<!-- Le coffre des lettres -->
+
+<script src="lettres.js"></script>
+
+
 
 <script>
 
 
 const param =
+
 new URLSearchParams(
+
 window.location.search
+
 );
 
 
+
 const date =
+
 new Date(
+
 param.get("date")
+
+);
+
+
+
+const dateAffichee =
+
+date.toLocaleDateString(
+
+"fr-FR",
+
+{
+
+day:"numeric",
+
+month:"long",
+
+year:"numeric"
+
+}
+
 );
 
 
 
 document.getElementById("dateLettre").innerHTML =
 
-date.toLocaleDateString(
-"fr-FR",
-{
-day:"numeric",
-month:"long",
-year:"numeric"
+dateAffichee;
+
+
+
+const dateCle =
+
+date.toISOString().split("T")[0];
+
+
+
+const lettreChoisie =
+
+lettres[dateCle];
+
+
+
+
+const texteLettre =
+
+document.getElementById("texteLettre");
+
+
+
+const photo =
+
+document.getElementById("photo");
+
+
+
+const video =
+
+document.getElementById("video");
+
+
+
+const musique =
+
+document.getElementById("musique");
+
+
+
+
+
+if(lettreChoisie){
+
+
+
+texteLettre.innerHTML =
+
+lettreChoisie.texte;
+
+
+
+if(lettreChoisie.photo !== ""){
+
+photo.src = lettreChoisie.photo;
+
 }
-);
+
+else{
+
+photo.style.display="none";
+
+}
 
 
 
-document.getElementById("texteLettre").innerHTML =
+
+if(lettreChoisie.video !== ""){
+
+video.src = lettreChoisie.video;
+
+}
+
+else{
+
+video.style.display="none";
+
+}
+
+
+
+
+if(lettreChoisie.musique !== ""){
+
+musique.src = lettreChoisie.musique;
+
+}
+
+else{
+
+musique.style.display="none";
+
+}
+
+
+
+}
+
+else{
+
+
+
+texteLettre.innerHTML =
 
 `
-Ma chère Sowji,
+
+Cette lettre n'est pas encore arrivée...
 
 <br><br>
 
-Aujourd’hui une nouvelle lettre arrive jusqu’à toi.
+Elle voyage encore jusqu'à son jour.
 
-<br><br>
-
-Ici viendra le message écrit avec le cœur.
-
-<br><br>
-
-Avec toute mon affection.
 `;
 
+}
 
-
-
-
-<script src="lettres.js"></script>
-
-
-<script>
 
 
 function retourJardin(){
 
+
 window.location.href =
+
 "jardin.html";
+
 
 }
 
 
+
 </script>
+
 
 
 </body>
