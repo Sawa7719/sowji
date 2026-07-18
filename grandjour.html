@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Le grand jour</title>
+<title>Le plus beau des jours</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,12 +16,25 @@
 <body>
 
 
-<div class="parchemin">
+
+<div class="parchemin grand-jour">
+
+
+
+<div class="sceau-royal">
+
+👑
+
+</div>
+
 
 
 <h1>
-🌹 Le plus beau des jours
+
+🌹 Le plus beau des jours 🌹
+
 </h1>
+
 
 
 <div class="contenu-lettre">
@@ -29,40 +42,64 @@
 
 <p>
 
-Le voyage touche à sa fin...
+Ma chère Sowji,
 
 <br><br>
 
-Toutes les fleurs ont poussé,
-toutes les lettres ont trouvé leur chemin.
+
+Aujourd'hui est arrivé le moment que toutes les fleurs attendaient.
 
 <br><br>
 
-Aujourd'hui, la dernière fleur s'ouvre.
+
+Chaque lettre, chaque souvenir et chaque petite fleur nous ont guidés jusqu'ici.
 
 <br><br>
 
-✨
+
+Merci d'avoir ouvert ce jardin secret.
+
+<br><br>
+
+
+Que ce moment reste gravé pour toujours.
+
+<br><br>
+
+
+❤️
 
 </p>
 
 
 
-<div id="souvenirs"></div>
+<div class="signature-royale">
+
+
+<p>
+Pour Sowji
+</p>
+
+
+<span>
+Avec tout mon cœur ❤️
+</span>
+
+
+</div>
 
 
 
 </div>
 
 
-<br>
-
 
 <button onclick="retourJardin()">
 
-Retour au jardin
+🌿 Retour au jardin
 
 </button>
+
 
 
 </div>
@@ -74,95 +111,55 @@ Retour au jardin
 <script>
 
 
-let zone =
-
-document.getElementById("souvenirs");
-
-
-
-let nombre = 0;
-
-
-
-for(let cle in localStorage){
-
-
-if(cle.startsWith("sowji-")){
-
-
-let lettre =
-
-JSON.parse(
-
-localStorage.getItem(cle)
-
-);
-
-
-
-if(lettre.message){
-
-
-nombre++;
-
-
-zone.innerHTML +=
-
-
-`
-
-<p>
-
-🌸 Souvenir du ${cle.replace("sowji-","")}
-
-</p>
-
-`;
-
-
-
-}
-
-
-
-}
-
-
-
-}
-
-
-
-
-if(nombre===0){
-
-
-zone.innerHTML =
-
-`
-
-<p>
-
-Le jardin garde encore ses secrets...
-
-</p>
-
-`;
-
-
-
-}
-
-
-
-
 function retourJardin(){
-
 
 window.location.href="jardin.html";
 
+}
+
+
+
+
+
+function creerPetale(){
+
+
+let p=document.createElement("div");
+
+
+p.className="petale";
+
+
+p.innerHTML="🌹";
+
+
+p.style.left=Math.random()*100+"vw";
+
+
+p.style.animationDuration=
+
+(5+Math.random()*5)+"s";
+
+
+
+document.body.appendChild(p);
+
+
+
+setTimeout(()=>{
+
+
+p.remove();
+
+
+},10000);
+
 
 }
+
+
+
+setInterval(creerPetale,500);
 
 
 
