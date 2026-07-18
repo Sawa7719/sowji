@@ -1,31 +1,9 @@
-/*
-=================================
-SOWJI
-LE COFFRE DES LETTRES
-=================================
-
-Pour ajouter une lettre :
-
-"AAAA-MM-JJ": {
-
-texte: `Votre texte`,
-
-photo:"",
-video:"",
-musique:""
-
-}
-
-=================================
-*/
-
-
 const lettres = {
-
 
 
 "2026-07-21": {
 
+titre: "Le commencement",
 
 texte: `
 
@@ -33,24 +11,21 @@ Ma chère Sowji,
 
 <br><br>
 
-Aujourd’hui commence ce petit voyage
-écrit avec le cœur.
+Aujourd’hui commence notre voyage.
 
 <br><br>
 
-Chaque jour une lettre viendra doucement
-t’accompagner jusqu’au plus beau des jours.
+Chaque fleur de ce jardin représente
+un petit morceau de chemin jusqu’au plus beau des jours.
 
 <br><br>
 
-Avec toute mon affection.
+Avec tout mon cœur.
 
 `,
 
 
 photo:"",
-
-video:"",
 
 musique:""
 
@@ -62,22 +37,21 @@ musique:""
 
 "2026-07-22": {
 
+titre: "Une nouvelle fleur",
 
 texte: `
 
-Une nouvelle page s’ouvre aujourd’hui.
+Une nouvelle journée,
+une nouvelle fleur s’ouvre dans le jardin.
 
 <br><br>
 
-Un nouveau petit morceau de bonheur
-à découvrir dans ce jardin.
+Un nouveau souvenir vient prendre sa place.
 
 `,
 
 
 photo:"",
-
-video:"",
 
 musique:""
 
@@ -88,30 +62,34 @@ musique:""
 
 
 
-"2026-07-23": {
+"2026-08-30": {
 
+titre: "Le plus beau des jours",
 
 texte: `
 
-Cette lettre voyage jusqu’à toi.
+Le voyage arrive aujourd’hui à sa destination.
 
 <br><br>
 
-Elle porte avec elle une pensée,
-un sourire et beaucoup d’affection.
+Toutes les fleurs ont poussé,
+toutes les lettres ont trouvé leur chemin.
+
+<br><br>
+
+Bienvenue dans ce moment précieux.
+
+🌹
 
 `,
 
 
 photo:"",
 
-video:"",
-
 musique:""
 
 
 }
-
 
 
 
