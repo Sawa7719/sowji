@@ -275,7 +275,38 @@ dateActuelle.getDate()+1
 
 </script>
 
+<script>
 
+function creerPetale(){
+
+let p=document.createElement("div");
+
+p.className="petale";
+
+p.innerHTML="🌸";
+
+p.style.left=Math.random()*100+"vw";
+
+p.style.animationDuration=
+(5+Math.random()*5)+"s";
+
+document.body.appendChild(p);
+
+
+setTimeout(()=>{
+
+p.remove();
+
+},10000);
+
+
+}
+
+
+setInterval(creerPetale,700);
+
+
+</script>
 </body>
 
 </html>
