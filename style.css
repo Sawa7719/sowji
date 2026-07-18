@@ -955,3 +955,71 @@ font-size:20px;
 color:#fff0c4;
 
 }
+/* ==========================
+   SIGNATURE ROYALE
+========================== */
+
+
+.signature-royale{
+
+margin-top:40px;
+
+padding:30px;
+
+font-family:"Brush Script MT",cursive;
+
+color:#d4af37;
+
+font-size:45px;
+
+text-shadow:
+
+0 0 10px #fff0c4,
+
+0 0 30px #d4af37;
+
+animation:
+
+apparitionSignature 3s ease;
+
+}
+
+
+.signature-royale span{
+
+display:block;
+
+font-family:Georgia,serif;
+
+font-size:20px;
+
+margin-top:20px;
+
+color:#fff0c4;
+
+}
+
+
+
+@keyframes apparitionSignature{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
