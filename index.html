@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sowji - Le chemin vers ton grand jour</title>
+
+<style>
+
+body {
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#07110c;
+font-family:Georgia, serif;
+color:#f5e6b8;
+text-align:center;
+}
+
+
+.palais {
+
+width:90%;
+max-width:450px;
+
+}
+
+
+h1 {
+
+font-size:42px;
+color:#d4af37;
+
+}
+
+
+.slogan {
+
+font-size:20px;
+line-height:1.6;
+
+}
+
+
+.porte {
+
+margin-top:40px;
+
+padding:20px;
+
+border:2px solid #d4af37;
+
+border-radius:50px;
+
+cursor:pointer;
+
+background:none;
+
+color:#d4af37;
+
+font-size:18px;
+
+}
+
+
+.cache {
+
+display:none;
+
+}
+
+
+input {
+
+padding:15px;
+
+border-radius:30px;
+
+border:none;
+
+text-align:center;
+
+font-size:18px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="palais">
+
+
+<h1>Sowji</h1>
+
+
+<h2>Le chemin vers ton grand jour</h2>
+
+
+<p class="slogan">
+
+Un voyage écrit avec le cœur,<br>
+jusqu'au plus beau des jours.
+
+</p>
+
+
+<div id="porte">
+
+<button class="porte" onclick="ouvrir()">
+
+🏰 Ouvrir le palais
+
+</button>
+
+</div>
+
+
+
+<div id="secret" class="cache">
+
+<p>
+
+🔐 Entre le mot secret
+
+</p>
+
+
+<input id="code" type="password">
+
+
+<br><br>
+
+
+<button class="porte" onclick="verifier()">
+
+Entrer
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+function ouvrir(){
+
+document.getElementById("porte").style.display="none";
+
+document.getElementById("secret").style.display="block";
+
+}
+
+
+
+function verifier(){
+
+
+let code=document.getElementById("code").value;
+
+
+if(code==="sowji"){
+
+alert("✨ Le palais s'ouvre...");
+
+}
+
+
+else{
+
+alert("Ce sceau ne reconnaît pas ce mot.");
+
+}
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
