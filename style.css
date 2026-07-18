@@ -745,3 +745,16 @@ opacity:1;
 
 
 }
+#compteur {
+
+color:#d4af37;
+
+font-size:24px;
+
+font-style:italic;
+
+text-shadow:
+
+0 0 15px rgba(212,175,55,.6);
+
+}
