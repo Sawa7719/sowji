@@ -18,14 +18,14 @@
 
 <div class="porte-jardin">
 
-<div class="cadre-porte">
+    <div class="cadre-porte">
 
-<h2>
-Pour t’accompagner<br>
-jusqu’au plus beau des jours…
-</h2>
+        <h2>
+        Pour t’accompagner<br>
+        jusqu’au plus beau des jours…
+        </h2>
 
-</div>
+    </div>
 
 </div>
 
@@ -58,34 +58,23 @@ jusqu'au plus beau des jours.
 
 
 
-
 <script>
 
 
-const chemin =
-
-document.getElementById("chemin");
+const chemin = document.getElementById("chemin");
 
 
 
-const debut =
+const debut = new Date("2026-07-21");
 
-new Date("2026-07-21");
-
-
-
-const fin =
-
-new Date("2026-08-30");
+const fin = new Date("2026-08-30");
 
 
 
 // Date de test
-// À changer plus tard
+// Plus tard on remettra la vraie date automatique
 
-const aujourdHui =
-
-new Date("2026-07-21");
+const aujourdHui = new Date("2026-07-21");
 
 
 
@@ -114,10 +103,9 @@ month:"long"
 
 
 
-let dateActuelle =
+let dateActuelle = new Date(debut);
 
-new Date(debut);
-
+let compteur = 0;
 
 
 
@@ -126,9 +114,7 @@ while(dateActuelle <= fin){
 
 
 
-let fleur =
-
-document.createElement("div");
+let fleur = document.createElement("div");
 
 
 
@@ -139,25 +125,26 @@ fleur.className =
 
 
 
-
 let symbole;
 
-
+let classeSceau;
 
 let ouverte = false;
 
 
 
-let classeSceau;
-
-
 if(dateActuelle < aujourdHui){
+
 
 symbole = "🪷";
 
 classeSceau = "lotus";
 
+ouverte = true;
+
+
 }
+
 
 else if(
 
@@ -169,19 +156,27 @@ aujourdHui.getTime()
 
 ){
 
+
 symbole = "💎";
 
 classeSceau = "bijou";
 
+ouverte = true;
+
+
 }
 
+
 else{
+
 
 symbole = "🌙";
 
 classeSceau = "lune";
 
+
 }
+
 
 
 
@@ -190,7 +185,7 @@ fleur.innerHTML =
 
 `
 
-<div class="sceau-fleur">
+<div class="sceau-fleur ${classeSceau}">
 
 ${symbole}
 
@@ -212,9 +207,7 @@ ${afficherDate(dateActuelle)}
 if(ouverte){
 
 
-let dateLettre =
-
-dateActuelle.toISOString();
+let dateLettre = dateActuelle.toISOString();
 
 
 
@@ -223,17 +216,14 @@ fleur.onclick = function(){
 
 window.location.href =
 
-"lettre.html?date="
-
-+
-
-dateLettre;
+"lettre.html?date=" + dateLettre;
 
 
 };
 
 
 }
+
 
 else{
 
@@ -243,7 +233,7 @@ fleur.onclick = function(){
 
 alert(
 
-"Cette lettre voyage encore jusqu'à son jour..."
+"Cette lettre poursuit encore son voyage..."
 
 );
 
@@ -256,13 +246,17 @@ alert(
 
 
 
-
 fleur.style.setProperty(
+
 "--position",
+
 compteur
+
 );
 
 
+
+chemin.appendChild(fleur);
 
 
 
@@ -272,6 +266,9 @@ dateActuelle.getDate()+1
 
 );
 
+
+
+compteur++;
 
 
 }
