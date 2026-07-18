@@ -317,7 +317,248 @@ margin-top:20px;
 
 
 audio {
-
 margin-top:20px;
+
+}
+/* =================================
+   PARCHEMIN ROYAL
+   ================================= */
+
+
+body:has(.parchemin) {
+
+    background:
+    radial-gradient(circle at top,
+    #3a2a17,
+    #090704 75%);
+
+}
+
+
+
+/* Conteneur du parchemin */
+
+.parchemin {
+
+    position:relative;
+
+    max-width:650px;
+
+    margin:50px auto;
+
+    padding:55px 35px;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #d8bc83,
+    #f3dfae,
+    #d8bc83
+    );
+
+
+    color:#4b3218;
+
+    border-radius:10px;
+
+
+    box-shadow:
+
+    0 0 40px rgba(212,175,55,0.6),
+
+    inset 0 0 30px rgba(80,45,10,0.3);
+
+
+    animation:
+
+    ouvrirRouleau 1.5s ease;
+
+}
+
+
+
+/* Rouleaux haut et bas */
+
+
+.parchemin::before,
+
+.parchemin::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:-15px;
+
+
+    right:-15px;
+
+
+    height:35px;
+
+
+    background:
+
+    linear-gradient(
+    #7b4f22,
+    #c28a45,
+    #7b4f22
+    );
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+.parchemin::before {
+
+    top:-15px;
+
+}
+
+
+
+.parchemin::after {
+
+    bottom:-15px;
+
+}
+
+
+
+/* Titre */
+
+
+.parchemin h1 {
+
+
+    color:#7a4b1c;
+
+
+    font-size:38px;
+
+
+    text-shadow:
+
+    0 1px 1px #fff;
+
+}
+
+
+
+/* Texte de la lettre */
+
+
+.contenu-lettre {
+
+
+    margin-top:35px;
+
+
+    font-size:21px;
+
+
+    line-height:1.8;
+
+
+    font-style:italic;
+
+
+}
+
+
+
+/* Date */
+
+
+#dateLettre {
+
+
+    color:#8b5a24;
+
+
+    font-size:18px;
+
+
+}
+
+
+
+/* Médias */
+
+
+.media img,
+
+.media video {
+
+
+    width:90%;
+
+
+    margin-top:30px;
+
+
+    border-radius:15px;
+
+
+    box-shadow:
+
+    0 0 20px rgba(0,0,0,0.25);
+
+
+}
+
+
+
+.media audio {
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+/* Animation ouverture */
+
+
+@keyframes ouvrirRouleau {
+
+
+    from {
+
+
+        transform:
+
+        scaleY(0);
+
+
+        opacity:0;
+
+
+    }
+
+
+    to {
+
+
+        transform:
+
+        scaleY(1);
+
+
+        opacity:1;
+
+
+    }
+
 
 }
