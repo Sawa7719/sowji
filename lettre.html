@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Une lettre pour toi</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="parchemin">
+
+
+<h1>
+📜 Une lettre pour toi
+</h1>
+
+
+<div id="contenu">
+
+
+<p>
+Cette lettre voyage depuis le cœur...
+</p>
+
+
+<p id="texteLettre">
+
+</p>
+
+
+<div id="media">
+
+</div>
+
+
+</div>
+
+
+
+<button onclick="retourJardin()">
+
+Retour au jardin
+
+</button>
+
+
+</div>
+
+
+
+<script>
+
+
+const texteLettre =
+document.getElementById("texteLettre");
+
+
+const media =
+document.getElementById("media");
+
+
+
+const param =
+new URLSearchParams(
+window.location.search
+);
+
+
+
+const date =
+new Date(
+param.get("date")
+);
+
+
+
+const jour =
+date.toLocaleDateString(
+"fr-FR",
+{
+day:"numeric",
+month:"long",
+year:"numeric"
+}
+);
+
+
+
+
+
+texteLettre.innerHTML =
+
+`
+
+Ma chère Sowji,
+
+<br><br>
+
+Nous sommes le ${jour}.
+
+<br><br>
+
+Cette lettre attend encore son histoire...
+
+<br><br>
+
+Avec toute mon affection 💛
+
+`;
+
+
+
+
+
+function retourJardin(){
+
+window.location.href =
+"jardin.html";
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
