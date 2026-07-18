@@ -1043,3 +1043,18 @@ z-index:1;
 
 
 }
+.finale {
+
+animation:
+
+briller 1.5s infinite;
+
+
+box-shadow:
+
+0 0 50px gold;
+
+
+font-size:45px;
+
+}
