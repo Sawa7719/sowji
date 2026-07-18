@@ -19,7 +19,7 @@
 <div class="parchemin">
 
 
-<h1>
+<h1 id="titreLettre">
 📜 Une lettre pour toi
 </h1>
 
@@ -75,14 +75,11 @@ Retour au jardin
 
 
 
-
 <script src="lettres.js"></script>
 
 
 
-
 <script>
-
 
 
 const parametres =
@@ -113,32 +110,21 @@ date.toISOString().split("T")[0];
 
 
 
-document.getElementById("dateLettre").innerHTML =
+const titreLettre =
 
-
-date.toLocaleDateString(
-
-"fr-FR",
-
-{
-
-day:"numeric",
-
-month:"long",
-
-year:"numeric"
-
-}
-
-);
-
-
+document.getElementById("titreLettre");
 
 
 
 const texteLettre =
 
 document.getElementById("texteLettre");
+
+
+
+const dateLettre =
+
+document.getElementById("dateLettre");
 
 
 
@@ -162,17 +148,21 @@ document.getElementById("musique");
 
 
 
-let lettre = null;
+dateLettre.innerHTML =
 
+date.toLocaleDateString(
 
+"fr-FR",
 
+{
 
+day:"numeric",
 
-let sauvegarde =
+month:"long",
 
-localStorage.getItem(
+year:"numeric"
 
-"sowji-" + cleDate
+}
 
 );
 
@@ -180,37 +170,16 @@ localStorage.getItem(
 
 
 
-if(sauvegarde){
 
-
-let contenu = JSON.parse(sauvegarde);
-
-
-
-lettre = {
-
-
-texte: contenu.message,
-
-
-photo: contenu.photo,
-
-
-video:"",
-
-
-musique: contenu.musique
-
-
-};
+let lettre = null;
 
 
 
-}
 
 
+/* Recherche dans le vrai coffre */
 
-else if(typeof lettres !== "undefined"){
+if(typeof lettres !== "undefined"){
 
 
 lettre = lettres[cleDate];
@@ -222,15 +191,21 @@ lettre = lettres[cleDate];
 
 
 
-
-
 if(lettre){
+
+
+
+titreLettre.innerHTML =
+
+"📜 " + lettre.titre;
 
 
 
 texteLettre.innerHTML =
 
 lettre.texte;
+
+
 
 
 
@@ -253,6 +228,7 @@ photo.style.display="none";
 
 
 
+
 if(lettre.video){
 
 
@@ -268,6 +244,7 @@ video.style.display="none";
 
 
 }
+
 
 
 
@@ -294,18 +271,26 @@ musique.style.display="none";
 
 
 
+
+
 else{
+
+
+titreLettre.innerHTML =
+
+"📜 Lettre introuvable";
+
 
 
 texteLettre.innerHTML =
 
 `
 
-Cette lettre n'est pas encore arrivée...
+Cette lettre n'est pas encore arrivée.
 
 <br><br>
 
-Elle voyage encore jusqu'au plus beau des jours.
+Le jardin garde encore ce secret.
 
 `;
 
@@ -328,6 +313,7 @@ window.location.href="jardin.html";
 
 
 </script>
+
 
 
 </body>
