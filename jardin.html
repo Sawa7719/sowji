@@ -18,14 +18,14 @@
 
 <div class="porte-jardin">
 
-    <div class="cadre-porte">
+<div class="cadre-porte">
 
-        <h2>
-        Pour t’accompagner<br>
-        jusqu’au plus beau des jours…
-        </h2>
+<h2>
+Pour t’accompagner<br>
+jusqu’au plus beau des jours…
+</h2>
 
-    </div>
+</div>
 
 </div>
 
@@ -52,60 +52,74 @@ jusqu'au plus beau des jours.
 
 
 
-<div class="chemin" id="chemin">
-
-</div>
+<div class="chemin" id="chemin"></div>
 
 
 
 </div>
+
 
 
 
 <script>
 
 
-const chemin = document.getElementById("chemin");
+
+const chemin =
+
+document.getElementById("chemin");
 
 
 
-const debut = new Date("2026-07-21");
+const debut =
 
-const fin = new Date("2026-08-30");
+new Date("2026-07-21");
 
 
+const fin =
 
-// Date de test
-// À changer plus tard
-
-const aujourdHui = new Date("2026-07-21");
+new Date("2026-08-30");
 
 
 
+const aujourdHui =
+
+new Date();
 
 
-/* COMPTEUR */
 
 
-const grandJour = new Date("2026-08-30");
+// Date du grand jour
+
+const grandJour =
+
+new Date("2026-08-30");
 
 
-const maintenant = new Date();
+
+const difference =
+
+grandJour - aujourdHui;
 
 
-const difference = grandJour - maintenant;
 
+const jours =
 
-const jours = Math.ceil(
+Math.max(
 
-difference / (1000 * 60 * 60 * 24)
+0,
+
+Math.ceil(
+
+difference / (1000*60*60*24)
+
+)
 
 );
 
 
 
 document.getElementById("compteur").innerHTML =
-
 
 "Encore " + jours + " jours avant le plus beau des jours…";
 
@@ -132,18 +146,15 @@ month:"long"
 
 );
 
-
 }
 
 
 
 
 
-let dateActuelle = new Date(debut);
+let dateActuelle =
 
-
-let compteur = 0;
-
+new Date(debut);
 
 
 
@@ -152,35 +163,46 @@ while(dateActuelle <= fin){
 
 
 
-let fleur = document.createElement("div");
+let cleDate =
+
+dateActuelle.toISOString().split("T")[0];
+
+
+
+let fleur =
+
+document.createElement("div");
 
 
 
 fleur.className =
 
-"fleur-jardin fleur-" + compteur;
+"fleur-jardin";
 
 
 
 
 
-let symbole;
+let symbole = "🌙";
 
-let classeSceau;
+let classe = "lune";
 
-let ouverte = false;
-
-
+let disponible = false;
 
 
 
-let lettreSauvegardee =
+
+
+/*
+La mémoire du jardin
+*/
+
+
+let souvenir =
 
 localStorage.getItem(
 
-"sowji-" +
-
-dateActuelle.toISOString().split("T")[0]
+"sowji-"+cleDate
 
 );
 
@@ -188,29 +210,14 @@ dateActuelle.toISOString().split("T")[0]
 
 
 
-
-if(lettreSauvegardee){
-
-
-symbole = "🪷";
-
-classeSceau = "lotus";
-
-ouverte = true;
+if(souvenir){
 
 
-}
+symbole="🪷";
 
+classe="lotus";
 
-
-else if(dateActuelle < aujourdHui){
-
-
-symbole = "🪷";
-
-classeSceau = "lotus";
-
-ouverte = true;
+disponible=true;
 
 
 }
@@ -220,35 +227,22 @@ ouverte = true;
 
 else if(
 
-dateActuelle.getTime()
+cleDate ===
 
-===
-
-aujourdHui.getTime()
+aujourdHui.toISOString().split("T")[0]
 
 ){
 
 
-symbole = "💎";
+symbole="💎";
 
-classeSceau = "bijou";
+classe="bijou";
 
-ouverte = true;
-
-
-}
-
-
-
-else{
-
-
-symbole = "🌙";
-
-classeSceau = "lune";
+disponible=true;
 
 
 }
+
 
 
 
@@ -256,9 +250,10 @@ classeSceau = "lune";
 
 fleur.innerHTML =
 
+
 `
 
-<div class="sceau-fleur ${classeSceau}">
+<div class="sceau-fleur ${classe}">
 
 ${symbole}
 
@@ -277,21 +272,34 @@ ${afficherDate(dateActuelle)}
 
 
 
-if(ouverte){
 
 
-let dateLettre =
-
-dateActuelle.toISOString();
+if(disponible){
 
 
 
 fleur.onclick = function(){
 
 
+
+localStorage.setItem(
+
+"sowji-ouvert-"+cleDate,
+
+"true"
+
+);
+
+
+
 window.location.href =
 
-"lettre.html?date=" + dateLettre;
+"lettre.html?date="
+
++
+
+dateActuelle.toISOString();
+
 
 
 };
@@ -300,12 +308,10 @@ window.location.href =
 
 }
 
-
-
 else{
 
 
-fleur.onclick = function(){
+fleur.onclick=function(){
 
 
 alert(
@@ -329,15 +335,13 @@ chemin.appendChild(fleur);
 
 
 
+
 dateActuelle.setDate(
 
 dateActuelle.getDate()+1
 
 );
 
-
-
-compteur++;
 
 
 }
