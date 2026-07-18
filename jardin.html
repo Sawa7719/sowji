@@ -1,4 +1,4 @@
-<!DOCTYPE html
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -20,7 +20,7 @@
 
 
 <h1>
-🌿 Ton jardin 🌿
+🌿 Ton jardin
 </h1>
 
 
@@ -33,13 +33,14 @@ jusqu'au plus beau des jours.
 
 
 
-<div class="allee" id="chemin">
+<div class="chemin" id="chemin">
 
 </div>
 
 
 
 </div>
+
 
 
 
@@ -47,21 +48,28 @@ jusqu'au plus beau des jours.
 
 
 const chemin =
+
 document.getElementById("chemin");
 
 
 
 const debut =
+
 new Date("2026-07-21");
 
+
+
 const fin =
+
 new Date("2026-08-30");
 
 
+
 // Date de test
-// À remplacer plus tard par la vraie date
+// À changer plus tard
 
 const aujourdHui =
+
 new Date("2026-07-21");
 
 
@@ -69,6 +77,7 @@ new Date("2026-07-21");
 
 
 function afficherDate(date){
+
 
 return date.toLocaleDateString(
 
@@ -84,15 +93,16 @@ month:"long"
 
 );
 
+
 }
 
 
 
 
 let dateActuelle =
+
 new Date(debut);
 
-let compteur = 0;
 
 
 
@@ -100,13 +110,17 @@ let compteur = 0;
 while(dateActuelle <= fin){
 
 
+
 let fleur =
+
 document.createElement("div");
 
 
 
 fleur.className =
+
 "fleur-jardin";
+
 
 
 
@@ -115,26 +129,43 @@ let symbole;
 
 
 
+let ouverte = false;
+
+
+
 if(dateActuelle < aujourdHui){
 
-symbole="✿";
+
+symbole = "✿";
+
+ouverte = true;
+
 
 }
 
 else if(
+
 dateActuelle.getTime()
+
 ===
+
 aujourdHui.getTime()
 
 ){
 
-symbole="◇";
+
+symbole = "◇";
+
+ouverte = true;
+
 
 }
 
 else{
 
-symbole="☾";
+
+symbole = "☾";
+
 
 }
 
@@ -164,59 +195,58 @@ ${afficherDate(dateActuelle)}
 
 
 
-let datePourLettre =
+
+if(ouverte){
+
+
+let dateLettre =
+
 dateActuelle.toISOString();
 
 
 
-let etat;
-
-
-
-if(symbole==="☾"){
-
-etat="fermee";
-
-}
-
-else{
-
-etat="ouverte";
-
-}
-
-
-
-
-
-fleur.onclick=function(){
-
-
-if(etat==="fermee"){
-
-alert(
-"Cette lettre poursuit encore son voyage..."
-);
-
-}
-
-else{
+fleur.onclick = function(){
 
 
 window.location.href =
+
 "lettre.html?date="
-+ datePourLettre;
 
++
 
-}
+dateLettre;
 
 
 };
 
 
+}
+
+else{
+
+
+fleur.onclick = function(){
+
+
+alert(
+
+"Cette lettre voyage encore jusqu'à son jour..."
+
+);
+
+
+};
+
+
+}
+
+
+
 
 
 chemin.appendChild(fleur);
+
+
 
 
 
@@ -228,14 +258,12 @@ dateActuelle.getDate()+1
 
 
 
-compteur++;
-
-
 }
 
 
 
 </script>
+
 
 
 </body>
