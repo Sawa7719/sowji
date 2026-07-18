@@ -32,245 +32,11 @@ jusqu'au plus beau des jours.
 </p>
 
 
-<div id="chemin" class="chemin">
+
+<div class="allee" id="chemin">
 
 </div>
 
-
-</div>
-
-
-
-<script>
-
-
-const chemin =
-document.getElementById("chemin");
-
-
-
-const debut =
-new Date("2026-07-21");
-
-
-const fin =
-new Date("2026-08-30");
-
-
-
-// Date de test pour vérifier le fonctionnement
-// Plus tard elle sera automatique
-
-const aujourdHui =
-new Date("2026-07-21");
-
-
-
-
-
-function formatDate(date){
-
-return date.toLocaleDateString(
-"fr-FR",
-{
-day:"numeric",
-month:"long"
-}
-);
-
-}
-
-
-
-
-
-let date =
-new Date(debut);
-
-
-
-
-
-while(date <= fin){
-
-
-
-let fleur =
-document.createElement("div");
-
-
-fleur.className="fleur";
-
-
-
-let etat;
-
-
-
-if(date < aujourdHui){
-
-etat="lotus";
-
-}
-
-else if(
-date.getTime() === aujourdHui.getTime()
-){
-
-etat="bijou";
-
-}
-
-else{
-
-etat="lune";
-
-}
-
-
-
-
-
-let symbole;
-
-
-
-if(etat==="lune"){
-
-symbole="☾";
-
-}
-
-if(etat==="bijou"){
-
-symbole="◇";
-
-}
-
-if(etat==="lotus"){
-
-symbole="✿";
-
-}
-
-
-
-
-
-fleur.innerHTML = `
-
-<div class="symbole">
-
-${symbole}
-
-</div>
-
-<div class="date">
-
-${formatDate(date)}
-
-</div>
-
-`;
-
-
-
-
-
-fleur.onclick=function(){
-
-ouvrirLettre(date, etat);
-
-};
-
-
-
-
-chemin.appendChild(fleur);
-
-
-
-date.setDate(
-date.getDate()+1
-);
-
-
-}
-
-
-
-
-
-function ouvrirLettre(date, etat){
-
-
-if(etat==="lune"){
-
-alert(
-"Cette lettre poursuit encore son voyage..."
-);
-
-}
-
-
-else{
-
-
-window.location.href =
-"lettre.html?date="
-+ date.toISOString();
-
-
-}
-
-
-
-}
-
-
-
-</script>
-
-
-</body>
-
-</html><!DOCTYPE html>
-<html lang="fr">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Ton jardin</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-
-<body>
-
-
-<div class="jardin">
-
-
-<h1>
-🌿 Ton jardin 🌿
-</h1>
-
-
-<p class="phrase">
-
-Un voyage écrit avec le cœur,<br>
-jusqu'au plus beau des jours.
-
-</p>
-
-
-<div id="chemin" class="chemin">
-
-</div>
 
 
 </div>
@@ -288,14 +54,12 @@ document.getElementById("chemin");
 const debut =
 new Date("2026-07-21");
 
-
 const fin =
 new Date("2026-08-30");
 
 
-
-// Date de test pour vérifier le fonctionnement
-// Plus tard elle sera automatique
+// Date de test
+// À remplacer plus tard par la vraie date
 
 const aujourdHui =
 new Date("2026-07-21");
@@ -304,14 +68,20 @@ new Date("2026-07-21");
 
 
 
-function formatDate(date){
+function afficherDate(date){
 
 return date.toLocaleDateString(
+
 "fr-FR",
+
 {
+
 day:"numeric",
+
 month:"long"
+
 }
+
 );
 
 }
@@ -319,50 +89,24 @@ month:"long"
 
 
 
-
-let date =
+let dateActuelle =
 new Date(debut);
 
+let compteur = 0;
 
 
 
 
-while(date <= fin){
-
+while(dateActuelle <= fin){
 
 
 let fleur =
 document.createElement("div");
 
 
-fleur.className="fleur";
 
-
-
-let etat;
-
-
-
-if(date < aujourdHui){
-
-etat="lotus";
-
-}
-
-else if(
-date.getTime() === aujourdHui.getTime()
-){
-
-etat="bijou";
-
-}
-
-else{
-
-etat="lune";
-
-}
-
+fleur.className =
+"fleur-jardin";
 
 
 
@@ -371,39 +115,47 @@ let symbole;
 
 
 
-if(etat==="lune"){
-
-symbole="☾";
-
-}
-
-if(etat==="bijou"){
-
-symbole="◇";
-
-}
-
-if(etat==="lotus"){
+if(dateActuelle < aujourdHui){
 
 symbole="✿";
 
 }
 
+else if(
+dateActuelle.getTime()
+===
+aujourdHui.getTime()
+
+){
+
+symbole="◇";
+
+}
+
+else{
+
+symbole="☾";
+
+}
 
 
 
 
-fleur.innerHTML = `
 
-<div class="symbole">
+fleur.innerHTML =
+
+`
+
+<div class="sceau-fleur">
 
 ${symbole}
 
 </div>
 
-<div class="date">
 
-${formatDate(date)}
+<div class="date-fleur">
+
+${afficherDate(dateActuelle)}
 
 </div>
 
@@ -412,10 +164,52 @@ ${formatDate(date)}
 
 
 
+let datePourLettre =
+dateActuelle.toISOString();
+
+
+
+let etat;
+
+
+
+if(symbole==="☾"){
+
+etat="fermee";
+
+}
+
+else{
+
+etat="ouverte";
+
+}
+
+
+
+
 
 fleur.onclick=function(){
 
-ouvrirLettre(date, etat);
+
+if(etat==="fermee"){
+
+alert(
+"Cette lettre poursuit encore son voyage..."
+);
+
+}
+
+else{
+
+
+window.location.href =
+"lettre.html?date="
++ datePourLettre;
+
+
+}
+
 
 };
 
@@ -426,39 +220,15 @@ chemin.appendChild(fleur);
 
 
 
-date.setDate(
-date.getDate()+1
+dateActuelle.setDate(
+
+dateActuelle.getDate()+1
+
 );
 
 
-}
 
-
-
-
-
-function ouvrirLettre(date, etat){
-
-
-if(etat==="lune"){
-
-alert(
-"Cette lettre poursuit encore son voyage..."
-);
-
-}
-
-
-else{
-
-
-window.location.href =
-"lettre.html?date="
-+ date.toISOString();
-
-
-}
-
+compteur++;
 
 
 }
