@@ -279,8 +279,16 @@ musique:""
 },
 
 "2026-08-29":{
-titre:"La veille",
-texte:`Demain sera une journée remplie d'émotions.`,
+titre:"La dernière étape",
+
+texte:`Le jardin semble arrivé au bout de son chemin...<br><br>
+
+Toutes ces fleurs ont raconté une histoire.<br><br>
+
+Mais certains palais gardent encore une pièce secrète...<br><br>
+
+Demain, regarde bien ce qui se passera. 👑`,
+
 photo:"",
 musique:""
 },
