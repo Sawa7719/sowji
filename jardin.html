@@ -11,8 +11,6 @@
 
 <style>
 
-<style>
-
 body {
 
 margin:0;
@@ -35,8 +33,6 @@ overflow-x:hidden;
 .jardin {
 
 padding:40px 20px;
-
-position:relative;
 
 }
 
@@ -70,8 +66,6 @@ margin:20px auto 50px;
 
 .chemin {
 
-position:relative;
-
 display:flex;
 
 flex-wrap:wrap;
@@ -80,7 +74,7 @@ justify-content:center;
 
 gap:35px;
 
-max-width:500px;
+max-width:600px;
 
 margin:auto;
 
@@ -142,6 +136,8 @@ font-size:13px;
 
 margin-top:5px;
 
+color:#555;
+
 }
 
 
@@ -169,112 +165,8 @@ transform:scale(1);
 
 </style>
 
-.jardin {
-
-padding:40px 20px;
-
-}
-
-
-
-h1 {
-
-font-size:42px;
-
-color:#d4af37;
-
-margin-top:20px;
-
-}
-
-
-
-.intro {
-
-font-size:20px;
-
-line-height:1.6;
-
-max-width:420px;
-
-margin:20px auto;
-
-}
-
-
-
-.chemin {
-
-margin-top:50px;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-gap:25px;
-
-}
-
-
-
-.fleur {
-
-width:120px;
-
-min-height:120px;
-
-border-radius:50%;
-
-background:#f4ead3;
-
-border:3px solid #d4af37;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:45px;
-
-color:#333;
-
-box-shadow:
-0 0 25px rgba(212,175,55,0.5);
-
-transition:0.4s;
-
-}
-
-
-
-.fleur:hover {
-
-transform:scale(1.08);
-
-}
-
-
-
-.fleur small {
-
-font-size:15px;
-
-color:#555;
-
-margin-top:8px;
-
-}
-
-
-
-</style>
-
 </head>
+
 
 
 <body>
@@ -307,6 +199,7 @@ sur le chemin vers ton grand jour.
 
 
 
+
 <script>
 
 
@@ -323,10 +216,9 @@ new Date("August 30, 2026");
 
 
 
-// MODE TEST
-// Pour essayer l'application,
-// changez cette date.
-// Plus tard on remettra la vraie date.
+// DATE DE TEST
+// On changera ça plus tard
+// pour la vraie date automatique
 
 let aujourdHui =
 new Date("July 21, 2026");
@@ -334,18 +226,27 @@ new Date("July 21, 2026");
 
 
 
+
 function afficherDate(date){
 
 return date.toLocaleDateString(
+
 "fr-FR",
+
 {
+
 day:"numeric",
+
 month:"long",
+
 year:"numeric"
+
 }
+
 );
 
 }
+
 
 
 
@@ -356,12 +257,14 @@ new Date(debut);
 
 
 
+
 while(dateActuelle <= fin){
 
 
 
 let fleur =
 document.createElement("div");
+
 
 fleur.className="fleur";
 
@@ -378,9 +281,13 @@ symbole="🪷";
 }
 
 else if(
+
 dateActuelle.getTime()
+
 ===
+
 aujourdHui.getTime()
+
 ){
 
 symbole="💎";
@@ -396,17 +303,21 @@ symbole="🌙";
 
 
 
-fleur.innerHTML=
+
+fleur.innerHTML =
 
 `
 
 ${symbole}
 
 <small>
+
 ${afficherDate(dateActuelle)}
+
 </small>
 
 `;
+
 
 
 
@@ -415,13 +326,18 @@ chemin.appendChild(fleur);
 
 
 
+
+
 dateActuelle.setDate(
+
 dateActuelle.getDate()+1
+
 );
 
 
 
 }
+
 
 
 
