@@ -1,7 +1,21 @@
 /*
 =================================
 SOWJI
-Le coffre des lettres
+LE COFFRE DES LETTRES
+=================================
+
+Pour ajouter une lettre :
+
+"AAAA-MM-JJ": {
+
+texte: `Votre texte`,
+
+photo:"",
+video:"",
+musique:""
+
+}
+
 =================================
 */
 
@@ -19,10 +33,13 @@ Ma chère Sowji,
 
 <br><br>
 
-Aujourd'hui commence un voyage écrit avec le cœur.
+Aujourd’hui commence ce petit voyage
+écrit avec le cœur.
 
-Chaque jour, une petite lettre viendra t'accompagner
-jusqu'au plus beau des jours.
+<br><br>
+
+Chaque jour une lettre viendra doucement
+t’accompagner jusqu’au plus beau des jours.
 
 <br><br>
 
@@ -46,14 +63,14 @@ musique:""
 "2026-07-22": {
 
 
-texte:`
+texte: `
 
-Une nouvelle journée s'ouvre.
+Une nouvelle page s’ouvre aujourd’hui.
 
 <br><br>
 
-Une nouvelle page de notre histoire
-vient doucement se déposer dans ce jardin.
+Un nouveau petit morceau de bonheur
+à découvrir dans ce jardin.
 
 `,
 
@@ -74,14 +91,14 @@ musique:""
 "2026-07-23": {
 
 
-texte:`
+texte: `
 
-Aujourd'hui une nouvelle lettre arrive jusqu'à toi.
+Cette lettre voyage jusqu’à toi.
 
 <br><br>
 
-Garde précieusement ces petits instants,
-ils construisent le chemin vers notre grand jour.
+Elle porte avec elle une pensée,
+un sourire et beaucoup d’affection.
 
 `,
 
@@ -94,6 +111,7 @@ musique:""
 
 
 }
+
 
 
 
