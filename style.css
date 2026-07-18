@@ -948,3 +948,46 @@ box-shadow:
 
 
 }
+/* ==========================
+   SOUVENIRS
+========================== */
+
+
+.souvenir {
+
+
+margin:30px auto;
+
+
+padding:25px;
+
+
+max-width:450px;
+
+
+background:
+
+rgba(255,255,255,.25);
+
+
+border-radius:20px;
+
+
+box-shadow:
+
+0 0 20px rgba(212,175,55,.4);
+
+
+font-style:italic;
+
+
+}
+
+
+.souvenir h2 {
+
+
+color:#d4af37;
+
+
+}
