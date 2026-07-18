@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Le Palais de Sowji</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="coffre">
+
+
+<div class="couvercle">
+👑
+</div>
+
+
+<h1>
+Le Palais de Sowji
+</h1>
+
+
+<p>
+Un jardin secret rempli de souvenirs t'attend...
+</p>
+
+
+<button onclick="ouvrir()">
+
+🔐 Ouvrir le palais
+
+</button>
+
+
+</div>
+
+
+
+<script>
+
+
+function ouvrir(){
+
+document.querySelector(".coffre")
+.classList.add("ouvert");
+
+
+setTimeout(()=>{
+
+window.location.href="jardin.html";
+
+},1500);
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
