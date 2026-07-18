@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Écrire une lettre</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="parchemin">
+
+
+<h1>
+✍️ Écrire une lettre
+</h1>
+
+
+
+<p>
+
+Prépare ton message pour le jardin.
+
+</p>
+
+
+
+<label>
+
+Date de la lettre
+
+</label>
+
+
+<br>
+
+
+<input type="date" id="date">
+
+
+
+<br><br>
+
+
+
+<label>
+
+Ton message
+
+</label>
+
+
+<br>
+
+
+
+<textarea
+
+id="message"
+
+rows="12"
+
+placeholder="Écris ta lettre ici..."
+
+></textarea>
+
+
+
+<br><br>
+
+
+
+<label>
+
+Photo (optionnel)
+
+</label>
+
+
+<br>
+
+
+<input type="text" id="photo" placeholder="nom de la photo">
+
+
+
+<br><br>
+
+
+
+<label>
+
+Musique (optionnel)
+
+</label>
+
+
+<br>
+
+
+<input type="text" id="musique" placeholder="nom de la musique">
+
+
+
+<br><br>
+
+
+
+<button onclick="sauvegarder()">
+
+💌 Garder la lettre
+
+</button>
+
+
+
+<p id="resultat"></p>
+
+
+
+</div>
+
+
+
+<script>
+
+
+function sauvegarder(){
+
+
+
+let date =
+
+document.getElementById("date").value;
+
+
+
+let message =
+
+document.getElementById("message").value;
+
+
+
+let photo =
+
+document.getElementById("photo").value;
+
+
+
+let musique =
+
+document.getElementById("musique").value;
+
+
+
+
+let lettre = {
+
+
+date:date,
+
+message:message,
+
+photo:photo,
+
+musique:musique
+
+
+};
+
+
+
+localStorage.setItem(
+
+"sowji-"+date,
+
+JSON.stringify(lettre)
+
+);
+
+
+
+
+document.getElementById("resultat").innerHTML =
+
+"✨ La lettre a été déposée dans le coffre du jardin.";
+
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
