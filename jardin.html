@@ -44,6 +44,10 @@
 Un voyage écrit avec le cœur,<br>
 jusqu'au plus beau des jours.
 
+<br><br>
+
+<span id="compteur"></span>
+
 </p>
 
 
@@ -72,9 +76,40 @@ const fin = new Date("2026-08-30");
 
 
 // Date de test
-// À modifier plus tard
+// À changer plus tard
 
 const aujourdHui = new Date("2026-07-21");
+
+
+
+
+
+/* COMPTEUR */
+
+
+const grandJour = new Date("2026-08-30");
+
+
+const maintenant = new Date();
+
+
+const difference = grandJour - maintenant;
+
+
+const jours = Math.ceil(
+
+difference / (1000 * 60 * 60 * 24)
+
+);
+
+
+
+document.getElementById("compteur").innerHTML =
+
+
+"Encore " + jours + " jours avant le plus beau des jours…";
+
+
 
 
 
@@ -103,9 +138,12 @@ month:"long"
 
 
 
+
 let dateActuelle = new Date(debut);
 
+
 let compteur = 0;
+
 
 
 
@@ -125,11 +163,14 @@ fleur.className =
 
 
 
+
 let symbole;
 
 let classeSceau;
 
 let ouverte = false;
+
+
 
 
 
@@ -142,6 +183,7 @@ localStorage.getItem(
 dateActuelle.toISOString().split("T")[0]
 
 );
+
 
 
 
@@ -172,6 +214,7 @@ ouverte = true;
 
 
 }
+
 
 
 
@@ -237,7 +280,6 @@ ${afficherDate(dateActuelle)}
 if(ouverte){
 
 
-
 let dateLettre =
 
 dateActuelle.toISOString();
@@ -263,7 +305,6 @@ window.location.href =
 else{
 
 
-
 fleur.onclick = function(){
 
 
@@ -284,16 +325,6 @@ alert(
 
 
 
-fleur.style.setProperty(
-
-"--position",
-
-compteur
-
-);
-
-
-
 chemin.appendChild(fleur);
 
 
@@ -307,21 +338,6 @@ dateActuelle.getDate()+1
 
 
 compteur++;
-
-
-
-}
-
-
-
-
-
-function ouvrirAtelier(){
-
-
-window.location.href =
-
-"ecrire.html";
 
 
 }
