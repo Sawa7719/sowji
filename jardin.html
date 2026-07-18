@@ -332,6 +332,67 @@ if(ouvrable){
 fleur.onclick=function(){
 
 
+if(dateFleur.getTime() === fin.getTime()){
+
+
+
+let parchemin =
+document.createElement("div");
+
+
+
+parchemin.className="parchemin-final";
+
+
+
+parchemin.innerHTML=
+
+`
+
+👑
+
+<br><br>
+
+Ma chère Sowji,
+
+<br><br>
+
+Toutes les fleurs de ce jardin ont grandi
+jour après jour.
+
+<br><br>
+
+Chaque lettre était une petite partie de mon cœur.
+
+<br><br>
+
+Aujourd'hui, la dernière fleur s'ouvre...
+
+<br><br>
+
+Mais ce n'est pas la fin.
+
+<br><br>
+
+C'est le début de notre FOREVER. ❤️
+
+<br><br>
+
+🌹
+
+`;
+
+
+
+document.body.appendChild(parchemin);
+
+
+
+}
+
+else{
+
+
 window.location.href=
 
 "lettre.html?date="
@@ -340,6 +401,11 @@ window.location.href=
 
 dateFleur.toISOString();
 
+
+}
+
+
+};
 
 
 };
