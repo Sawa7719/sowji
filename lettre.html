@@ -24,7 +24,6 @@
 </h1>
 
 
-
 <div class="sceau-date">
 
 <span id="dateLettre"></span>
@@ -37,26 +36,17 @@
 
 
 <p id="texteLettre">
-
 La lettre voyage encore...
-
 </p>
 
-
-
-<div class="media">
 
 
 <img id="photo" alt="">
 
 
-<video id="video" controls></video>
 
+<audio id="musique" autoplay loop></audio>
 
-<audio id="musique" controls></audio>
-
-
-</div>
 
 
 </div>
@@ -65,128 +55,79 @@ La lettre voyage encore...
 
 <button onclick="retourJardin()">
 
-Retour au jardin
+🌿 Retour au jardin
 
 </button>
-
 
 
 </div>
 
 
 
-<script src="lettres.js"></script>
 
+
+<script src="lettres.js"></script>
 
 
 <script>
 
 
 const parametres =
-
 new URLSearchParams(
-
 window.location.search
-
 );
 
 
 
 const date =
-
 new Date(
-
 parametres.get("date")
-
 );
 
 
 
 const cleDate =
-
 date.toISOString().split("T")[0];
 
 
 
-
-
 const titreLettre =
-
 document.getElementById("titreLettre");
 
 
-
 const texteLettre =
-
 document.getElementById("texteLettre");
 
 
-
 const dateLettre =
-
 document.getElementById("dateLettre");
 
 
-
 const photo =
-
 document.getElementById("photo");
 
 
-
-const video =
-
-document.getElementById("video");
-
-
-
 const musique =
-
 document.getElementById("musique");
 
 
 
 
-
 dateLettre.innerHTML =
-
 date.toLocaleDateString(
-
 "fr-FR",
-
 {
-
 day:"numeric",
-
 month:"long",
-
 year:"numeric"
-
 }
-
 );
 
 
 
 
 
-
-let lettre = null;
-
-
-
-
-
-/* Recherche dans le vrai coffre */
-
-if(typeof lettres !== "undefined"){
-
-
-lettre = lettres[cleDate];
-
-
-}
-
+let lettre = lettres[cleDate];
 
 
 
@@ -194,126 +135,82 @@ lettre = lettres[cleDate];
 if(lettre){
 
 
-
 titreLettre.innerHTML =
-
 "📜 " + lettre.titre;
 
 
 
 texteLettre.innerHTML =
-
 lettre.texte;
-
-
 
 
 
 if(lettre.photo){
 
-
 photo.src = lettre.photo;
-
 
 }
 
 else{
-
 
 photo.style.display="none";
 
-
 }
-
-
-
-
-
-if(lettre.video){
-
-
-video.src = lettre.video;
-
-
-}
-
-else{
-
-
-video.style.display="none";
-
-
-}
-
-
 
 
 
 if(lettre.musique){
 
 
-musique.src = lettre.musique;
+musique.src =
+lettre.musique;
+
+
+musique.volume = 0.35;
+
+
+musique.play().catch(()=>{
+
+console.log("Lecture automatique bloquée par le navigateur");
+
+});
 
 
 }
 
 else{
 
-
 musique.style.display="none";
 
-
 }
 
 
-
 }
-
-
-
-
 
 else{
 
 
 titreLettre.innerHTML =
-
-"📜 Lettre introuvable";
-
+"📜 Lettre inconnue";
 
 
 texteLettre.innerHTML =
-
-`
-
-Cette lettre n'est pas encore arrivée.
-
-<br><br>
-
-Le jardin garde encore ce secret.
-
-`;
-
+"Cette lettre n'est pas encore arrivée.";
 
 
 }
-
 
 
 
 
 function retourJardin(){
 
-
 window.location.href="jardin.html";
-
 
 }
 
 
-
 </script>
-
 
 
 </body>
