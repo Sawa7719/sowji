@@ -377,3 +377,178 @@ opacity:1;
 
 
 }
+/* =========================
+   PORTE DU JARDIN
+========================= */
+
+
+.porte-jardin {
+
+display:flex;
+
+justify-content:center;
+
+margin-top:30px;
+
+}
+
+
+
+.cadre-porte {
+
+
+padding:25px 35px;
+
+
+border:3px solid #d4af37;
+
+
+border-radius:80px 80px 20px 20px;
+
+
+background:
+
+linear-gradient(
+
+#3b2612,
+
+#120b05
+
+);
+
+
+box-shadow:
+
+0 0 35px rgba(212,175,55,.6);
+
+
+}
+
+
+
+.cadre-porte h2 {
+
+
+color:#f5ead0;
+
+
+font-size:24px;
+
+
+font-style:italic;
+
+
+font-weight:normal;
+
+
+}
+
+
+
+/* =========================
+   CHEMIN DU JARDIN
+========================= */
+
+
+.chemin {
+
+
+position:relative;
+
+
+padding-top:40px;
+
+
+}
+
+
+
+.chemin::before {
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:0;
+
+
+left:50%;
+
+
+transform:translateX(-50%);
+
+
+width:8px;
+
+
+height:100%;
+
+
+background:
+
+linear-gradient(
+
+#d4af37,
+
+#8b5a24
+
+);
+
+
+border-radius:20px;
+
+
+opacity:.5;
+
+
+}
+
+
+
+/* fleurs */
+
+
+.fleur-jardin {
+
+
+position:relative;
+
+
+z-index:1;
+
+
+animation:
+
+apparition 1s ease;
+
+
+}
+
+
+
+
+@keyframes apparition {
+
+
+from {
+
+opacity:0;
+
+transform:scale(.5);
+
+}
+
+
+to {
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+
+}
