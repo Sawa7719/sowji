@@ -1,7 +1,7 @@
 /*
 =================================
 SOWJI
-Style du palais
+STYLE COMPLET DU PALAIS
 =================================
 */
 
@@ -20,7 +20,7 @@ margin:0;
 
 min-height:100vh;
 
-font-family:Georgia, "Times New Roman", serif;
+font-family:Georgia,"Times New Roman",serif;
 
 color:#f5ead0;
 
@@ -65,7 +65,7 @@ padding:50px 20px;
 
 h1 {
 
-font-size:55px;
+font-size:50px;
 
 color:#d4af37;
 
@@ -73,7 +73,7 @@ letter-spacing:3px;
 
 text-shadow:
 
-0 0 20px rgba(212,175,55,0.5);
+0 0 20px rgba(212,175,55,.6);
 
 }
 
@@ -82,6 +82,8 @@ text-shadow:
 h2 {
 
 font-weight:normal;
+
+color:#f5ead0;
 
 }
 
@@ -95,34 +97,41 @@ font-style:italic;
 
 line-height:1.7;
 
-margin:40px 0;
+margin:40px auto;
 
 }
 
 
 
-/* Boutons */
-
-
 button {
+
 
 padding:15px 35px;
 
+
 border-radius:40px;
+
 
 border:2px solid #d4af37;
 
-background:transparent;
+
+background:rgba(0,0,0,.2);
+
 
 color:#d4af37;
 
+
 font-family:Georgia,serif;
+
 
 font-size:18px;
 
+
 cursor:pointer;
 
+
 transition:.4s;
+
 
 }
 
@@ -130,11 +139,80 @@ transition:.4s;
 
 button:hover {
 
+
 transform:scale(1.05);
+
 
 box-shadow:
 
-0 0 30px rgba(212,175,55,.6);
+0 0 30px rgba(212,175,55,.7);
+
+
+}
+
+
+
+/* =========================
+   PORTE DU JARDIN
+========================= */
+
+
+.porte-jardin {
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+margin-top:35px;
+
+
+}
+
+
+
+.cadre-porte {
+
+
+padding:25px 40px;
+
+
+border:3px solid #d4af37;
+
+
+border-radius:100px 100px 20px 20px;
+
+
+background:
+
+linear-gradient(
+
+#392510,
+
+#100904
+
+);
+
+
+box-shadow:
+
+0 0 40px rgba(212,175,55,.6);
+
+
+}
+
+
+
+.cadre-porte h2 {
+
+
+font-style:italic;
+
+
+font-size:24px;
+
 
 }
 
@@ -147,307 +225,15 @@ box-shadow:
 
 .jardin {
 
+
 padding:40px 20px;
+
 
 min-height:100vh;
 
-}
-
-
-
-.chemin {
-
-max-width:700px;
-
-margin:auto;
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:35px;
 
 }
 
-
-
-.fleur-jardin {
-
-width:120px;
-
-height:120px;
-
-border-radius:50%;
-
-background:
-
-linear-gradient(
-
-145deg,
-
-#f7e8bd,
-
-#d9b96c
-
-);
-
-
-border:3px solid #d4af37;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-justify-content:center;
-
-cursor:pointer;
-
-transition:.4s;
-
-box-shadow:
-
-0 0 25px rgba(212,175,55,.4);
-
-}
-
-
-
-.fleur-jardin:hover {
-
-transform:translateY(-10px);
-
-}
-
-
-
-.sceau-fleur {
-
-font-size:45px;
-
-color:#70451d;
-
-}
-
-
-
-.date-fleur {
-
-font-size:13px;
-
-color:#3b2814;
-
-}
-
-
-
-/* =========================
-   PARCHEMIN
-========================= */
-
-
-.parchemin {
-
-max-width:650px;
-
-margin:50px auto;
-
-padding:55px 35px;
-
-background:
-
-linear-gradient(
-
-90deg,
-
-#d8bc83,
-
-#f3dfae,
-
-#d8bc83
-
-);
-
-
-color:#4b3218;
-
-border-radius:10px;
-
-box-shadow:
-
-0 0 40px rgba(212,175,55,.6);
-
-animation:
-
-ouvrirRouleau 1.5s ease;
-
-}
-
-
-
-.parchemin::before,
-
-.parchemin::after {
-
-
-content:"";
-
-display:block;
-
-height:30px;
-
-background:
-
-linear-gradient(
-
-#7b4f22,
-
-#c28a45,
-
-#7b4f22
-
-);
-
-border-radius:20px;
-
-margin:-70px -45px 40px;
-
-}
-
-
-
-.parchemin::after {
-
-margin:
-
-40px -45px -70px;
-
-}
-
-
-
-.contenu-lettre {
-
-font-size:21px;
-
-line-height:1.8;
-
-font-style:italic;
-
-}
-
-
-
-.media img,
-
-.media video {
-
-max-width:90%;
-
-border-radius:15px;
-
-margin-top:25px;
-
-}
-
-
-
-@keyframes ouvrirRouleau {
-
-
-from {
-
-transform:scaleY(0);
-
-opacity:0;
-
-}
-
-
-to {
-
-transform:scaleY(1);
-
-opacity:1;
-
-}
-
-
-}
-/* =========================
-   PORTE DU JARDIN
-========================= */
-
-
-.porte-jardin {
-
-display:flex;
-
-justify-content:center;
-
-margin-top:30px;
-
-}
-
-
-
-.cadre-porte {
-
-
-padding:25px 35px;
-
-
-border:3px solid #d4af37;
-
-
-border-radius:80px 80px 20px 20px;
-
-
-background:
-
-linear-gradient(
-
-#3b2612,
-
-#120b05
-
-);
-
-
-box-shadow:
-
-0 0 35px rgba(212,175,55,.6);
-
-
-}
-
-
-
-.cadre-porte h2 {
-
-
-color:#f5ead0;
-
-
-font-size:24px;
-
-
-font-style:italic;
-
-
-font-weight:normal;
-
-
-}
-
-
-
-/* =========================
-   CHEMIN DU JARDIN
-========================= */
 
 
 .chemin {
@@ -456,7 +242,25 @@ font-weight:normal;
 position:relative;
 
 
-padding-top:40px;
+max-width:700px;
+
+
+margin:auto;
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+align-items:center;
+
+
+gap:45px;
+
+
+padding:40px 0;
 
 
 }
@@ -475,16 +279,10 @@ position:absolute;
 top:0;
 
 
-left:50%;
+bottom:0;
 
 
-transform:translateX(-50%);
-
-
-width:8px;
-
-
-height:100%;
+width:10px;
 
 
 background:
@@ -508,9 +306,6 @@ opacity:.5;
 
 
 
-/* fleurs */
-
-
 .fleur-jardin {
 
 
@@ -518,6 +313,55 @@ position:relative;
 
 
 z-index:1;
+
+
+width:130px;
+
+
+height:130px;
+
+
+border-radius:50%;
+
+
+background:
+
+linear-gradient(
+
+145deg,
+
+#f7e8bd,
+
+#d9b96c
+
+);
+
+
+border:3px solid #d4af37;
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+cursor:pointer;
+
+
+box-shadow:
+
+
+0 0 25px rgba(212,175,55,.4);
+
+
+transition:.5s;
 
 
 animation:
@@ -529,49 +373,184 @@ apparition 1s ease;
 
 
 
+.fleur-jardin:nth-child(odd){
 
-@keyframes apparition {
+
+transform:
+
+translateX(-70px);
 
 
-from {
+}
 
-opacity:0;
 
-transform:scale(.5);
+
+.fleur-jardin:nth-child(even){
+
+
+transform:
+
+translateX(70px);
+
 
 }
 
 
-to {
 
-opacity:1;
+.fleur-jardin:hover {
 
-transform:scale(1);
+
+filter:brightness(1.15);
+
+
+}
+
+
+
+.sceau-fleur {
+
+
+width:65px;
+
+
+height:65px;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+border-radius:50%;
+
+
+font-size:38px;
+
+
+background:
+
+rgba(255,255,255,.25);
+
 
 }
 
 
+
+/* Sceaux */
+
+
+.lotus {
+
+
+box-shadow:
+
+0 0 30px rgba(212,175,55,.7);
+
+
 }
-/* =================================
-   PARCHEMIN QUI SE DEROULE
-================================= */
+
+
+
+.bijou {
+
+
+animation:
+
+briller 2s infinite;
+
+
+box-shadow:
+
+0 0 40px rgba(212,175,55,.9);
+
+
+}
+
+
+
+.lune {
+
+
+opacity:.7;
+
+
+}
+
+
+
+.date-fleur {
+
+
+font-size:13px;
+
+
+margin-top:8px;
+
+
+color:#3b2814;
+
+
+}
+
+
+
+/* =========================
+   PARCHEMIN
+========================= */
 
 
 .parchemin {
 
+
 position:relative;
 
-overflow:hidden;
 
-transform-origin:top;
+max-width:650px;
 
-animation:deroulement 1.8s ease;
+
+margin:60px auto;
+
+
+padding:60px 40px;
+
+
+background:
+
+linear-gradient(
+
+90deg,
+
+#d8bc83,
+
+#f3dfae,
+
+#d8bc83
+
+);
+
+
+color:#4b3218;
+
+
+border-radius:10px;
+
+
+box-shadow:
+
+0 0 50px rgba(212,175,55,.6);
+
+
+animation:
+
+deroulement 1.5s ease;
+
 
 }
 
-
-
-/* Rouleaux en bois */
 
 
 .parchemin::before,
@@ -585,10 +564,10 @@ content:"";
 position:absolute;
 
 
-left:-25px;
+left:-20px;
 
 
-right:-25px;
+right:-20px;
 
 
 height:35px;
@@ -612,18 +591,15 @@ linear-gradient(
 border-radius:30px;
 
 
-box-shadow:
-
-0 5px 15px rgba(0,0,0,.4);
-
-
 }
 
 
 
 .parchemin::before {
 
-top:-18px;
+
+top:-15px;
+
 
 }
 
@@ -631,78 +607,79 @@ top:-18px;
 
 .parchemin::after {
 
-bottom:-18px;
+
+bottom:-15px;
+
 
 }
 
-
-
-/* Texture intérieure */
 
 
 .contenu-lettre {
 
 
-background:
-
-radial-gradient(
-
-circle at center,
-
-rgba(255,255,255,.35),
-
-transparent
-
-);
+font-size:21px;
 
 
-padding:25px;
+line-height:1.8;
+
+
+font-style:italic;
+
+
+}
+
+
+
+.media img,
+
+.media video {
+
+
+max-width:90%;
 
 
 border-radius:15px;
 
 
+margin-top:25px;
+
+
 }
 
 
 
-/* Animation */
+audio {
 
 
-@keyframes deroulement {
+margin-top:25px;
 
 
-0% {
+}
 
 
-transform:
 
-scaleY(0);
+/* =========================
+   ANIMATIONS
+========================= */
+
+
+@keyframes apparition {
+
+
+from {
 
 
 opacity:0;
 
 
-}
-
-
-60% {
-
-
-transform:
-
-scaleY(1.05);
+transform:scale(.5);
 
 
 }
 
 
-100% {
-
-
-transform:
-
-scaleY(1);
+to {
 
 
 opacity:1;
@@ -712,268 +689,56 @@ opacity:1;
 
 
 }
-/* =================================
-   JARDIN QUI SERPENTE
-================================= */
-
-
-.chemin {
-
-position:relative;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-gap:45px;
-
-}
-
-
-
-.fleur-jardin {
-
-
-animation:
-
-apparition 1s ease;
-
-
-}
-
-
-
-.fleur-jardin:nth-child(odd) {
-
-
-transform:
-
-translateX(-70px);
-
-
-}
-
-
-
-.fleur-jardin:nth-child(even) {
-
-
-transform:
-
-translateX(70px);
-
-
-}
-
-
-
-.fleur-jardin:nth-child(odd):hover {
-
-
-transform:
-
-translateX(-70px)
-translateY(-10px)
-scale(1.08);
-
-
-}
-
-
-
-.fleur-jardin:nth-child(even):hover {
-
-
-transform:
-
-translateX(70px)
-translateY(-10px)
-scale(1.08);
-
-
-}
-
-
-
-
-.chemin::before {
-
-
-content:"";
-
-
-position:absolute;
-
-
-width:10px;
-
-
-height:100%;
-
-
-background:
-
-linear-gradient(
-
-#d4af37,
-
-#8b5a24
-
-);
-
-
-border-radius:20px;
-
-
-z-index:0;
-
-
-}
-
-
-
-.fleur-jardin {
-
-
-z-index:1;
-
-
-}
-/* =================================
-   SCEAUX MAGIQUES DU JARDIN
-================================= */
-
-
-.sceau-fleur {
-
-
-width:65px;
-
-height:65px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-
-border-radius:50%;
-
-
-font-size:38px;
-
-
-background:
-
-rgba(255,255,255,.25);
-
-
-transition:.5s;
-
-
-}
-
-
-
-/* Lettre découverte */
-
-
-.lotus {
-
-
-box-shadow:
-
-0 0 25px rgba(212,175,55,.7);
-
-
-}
-
-
-
-/* Lettre du jour */
-
-
-.bijou {
-
-
-animation:
-
-briller 2s infinite;
-
-
-box-shadow:
-
-0 0 35px rgba(212,175,55,.9);
-
-
-}
-
-
-
-/* Lettre future */
-
-
-.lune {
-
-
-opacity:.7;
-
-
-}
-
-
-
-
-.sceau-fleur:hover {
-
-
-transform:
-
-scale(1.2)
-rotate(5deg);
-
-
-}
-
 
 
 
 @keyframes briller {
 
 
-0% {
+0%,100% {
 
 
-filter:
-
-brightness(1);
+filter:brightness(1);
 
 
 }
-
 
 
 50% {
 
 
-filter:
+filter:brightness(1.5);
 
-brightness(1.5);
+
+}
 
 
 }
 
 
 
-100% {
+@keyframes deroulement {
 
 
-filter:
+from {
 
-brightness(1);
+
+transform:scaleY(0);
+
+
+opacity:0;
+
+
+}
+
+
+to {
+
+
+transform:scaleY(1);
+
+
+opacity:1;
 
 
 }
