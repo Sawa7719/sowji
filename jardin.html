@@ -157,7 +157,7 @@ let ouvrable = false;
 if(dateFleur <= maintenant){
 
 
-symbole="🏵️";
+symbole="🪷";
 
 classe="ouverte";
 
@@ -276,34 +276,41 @@ dateActuelle.getDate()+1
 </script>
 
 <script>
-
 function creerPetale(){
 
-let p=document.createElement("div");
+const etoiles=[
+"✨",
+"⭐",
+"❤️",
+"💛"
+];
+
+const p=document.createElement("div");
 
 p.className="petale";
 
-p.innerHTML="🌸";
+p.innerHTML=
+etoiles[Math.floor(Math.random()*etoiles.length)];
 
 p.style.left=Math.random()*100+"vw";
 
+p.style.fontSize=
+(14+Math.random()*22)+"px";
+
 p.style.animationDuration=
-(5+Math.random()*5)+"s";
+(6+Math.random()*6)+"s";
 
 document.body.appendChild(p);
 
-
-setTimeout(()=>{
+setTimeout(function(){
 
 p.remove();
 
-},10000);
-
+},12000);
 
 }
 
-
-setInterval(creerPetale,700);
+setInterval(creerPetale,350);
 
 
 </script>
